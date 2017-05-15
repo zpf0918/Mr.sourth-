@@ -44,6 +44,11 @@ GEM
     arel (7.1.1)
     autoprefixer-rails (6.7.7.2)
       execjs
+    awesome_print (1.7.0)
+    awesome_rails_console (0.4.0)
+      awesome_print
+      pry-rails
+      railties
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -82,6 +87,8 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
+    intercom-rails (0.3.5)
+      activesupport (> 3.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -112,6 +119,12 @@ GEM
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     pkg-config (1.1.7)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
     puma (3.6.0)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -155,6 +168,7 @@ GEM
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    slop (3.6.0)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -193,6 +207,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  awesome_rails_console
   better_errors
   bootstrap-sass
   byebug
@@ -200,6 +215,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   font-awesome-rails
+  intercom-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
