@@ -12,6 +12,8 @@ end
   resources :products do
     member do
       post :add_to_cart
+      post :favorite
+      post :unfavorite
     end
   end
 
@@ -22,5 +24,6 @@ end
   end
 
   resources :cart_items
+  resources :favorites
 
 end

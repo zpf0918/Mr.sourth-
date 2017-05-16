@@ -1,0 +1,27 @@
+<div class="col-md-12">
+
+  <h2 class="text-center"> 我的收藏</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th> # </th>
+        <th> 名称 </th>
+        <th> 描述 </th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td> # </td>
+
+          <td> <%= link_to(product.title, product_path(product)) %> </td>
+          <td> <%= product.description %> </td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

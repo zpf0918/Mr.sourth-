@@ -16,4 +16,7 @@ class Product < ApplicationRecord
 
   validates :title, presence: true
   validates :image, presence: true
+
+  has_many :favorites
+  has_many :fans, through: :favorites, source: :user
 end
