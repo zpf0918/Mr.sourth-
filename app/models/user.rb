@@ -35,5 +35,7 @@ class User < ApplicationRecord
     favorite_products.include?(product)
   end
 
+  has_many :orders
+
 
 end
