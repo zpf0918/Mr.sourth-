@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:favorite, :unfavorite]
   def index
-    @products = Product.all
+    @products = Product.all.order("position ASC")
   end
 
   def show

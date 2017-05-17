@@ -13,7 +13,8 @@
 
 class Product < ApplicationRecord
   mount_uploader :image, ImageUploader
-
+  acts_as_list
+  
   validates :title, presence: true
   validates :image, presence: true
 
