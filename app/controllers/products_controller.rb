@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
 	def unfavorite
 		@product = Product.find(params[:id])
 		current_user.favorite_products.delete(@product)
-    flash[:notice] = "您已取消收藏宝贝"
+    flash[:warning] = "您已取消收藏宝贝"
 		redirect_to :back
 	end
 end
