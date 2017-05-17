@@ -14,4 +14,20 @@ class OrderMailer < ApplicationMailer
 
     mail(to: "1243281264@qq.com" ,subject: "[JD store] 用户#{order.user.email}申请取消订单 #{order.token}")
   end
+
+  def notify_ship(order)
+    @order = order
+    @user = order.user
+    @product_lists = @order.product_lists
+
+    mail(to: @user.email, subject: "[JD store] 您的订单 #{order.token}已发货")
+  end
+
+  def notify_cancel(order)
+    @order = order
+    @user = order.user
+    @product_lists = order.product_lists
+
+    mail(to: @user.email, subject: "[JD store] 您的订单 #{order.token}已取消}")
+  end
 end
