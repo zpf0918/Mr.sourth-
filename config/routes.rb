@@ -27,4 +27,6 @@ end
   resources :cart_items
   resources :favorites
 
+  resources :orders
+
 end
