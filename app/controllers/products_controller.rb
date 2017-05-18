@@ -1,5 +1,13 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:favorite, :unfavorite]
+  before_action :validate_search_key, only: [:search]
+
+  def search
+    if @query_string.present?
+      @products = search_params
+    end
+  end
+
   def index
     @products = Product.all.order("position ASC")
   end
@@ -33,4 +41,18 @@ class ProductsController < ApplicationController
     flash[:warning] = "您已取消收藏宝贝"
 		redirect_to :back
 	end
+
+
+protected
+
+  def validate_search_key
+    @query_string = params[:q].gsub(/\\|\'|\/|\?/, "")if params[:q].present?
+  end
+
+private
+
+  def search_params
+    Product.ransack({:title_or_description_cont => @query_string}).result(distinct: true)
+  end
+
 end
