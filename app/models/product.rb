@@ -24,7 +24,7 @@ class Product < ApplicationRecord
   has_many :fans, through: :favorites, source: :user
 
   has_many :photos
-  accepts_nested_attributes_for :photos #这句暂时还不知设么意思
+  accepts_nested_attributes_for :photos
 
 
 end

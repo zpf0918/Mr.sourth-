@@ -1,13 +1,25 @@
 
 <div class="box panel panel-default">
-  <%= link_to product_path(product) do %>
-    <% if product.photos.present? %>
-        <!-- <%= image_tag(product.photos[0].image.url) %> -->
-        <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-    <% end %>
-  <% end %>
+  <!-- <% if @photos.present? %>
+   <% @photos.each_with_index do |p, index| %>
+     <% if index == 0 %>
+       <%= image_tag p.avatar.medium.url %>
+       <div style="letter-spacing: -8px">
+     <% else %>
+       <%= image_tag p.avatar.thumb.url %>
+     <% end %>
+   <% end %>
+   </div>
+ <% else %>
+     <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+ <% end %>> -->
+ <%= link_to product_path(product) do %>
+   <% if product.image.present? %>
+     <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+   <% else %>
+     <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+   <% end %>
+ <% end %>
   <div class="fig" >
     <p class="actions">
       <% if product.quantity.present? && product.quantity > 0 %>
@@ -26,16 +38,16 @@
         <% if user_signed_in? %>
           <% if !current_user.is_favorite_of?(product) %>
             <%= link_to favorite_product_path(product), :class => "like ",  method: :post do %>
-              <i class="fa  fa-star-o fa-lg"></i><%= product.fans.count %>
+              <i class="fa  fa-star-o fa-lg"></i>
             <% end %>
           <% else %>
             <%= link_to unfavorite_product_path(product), :class => "unlike ",method: :post do %>
-              <i class="fa  fa-star fa-lg"></i><%= product.fans.count %>
+              <i class="fa  fa-star fa-lg"></i>
             <% end %>
           <% end %>
         <% else %>
           <%= link_to favorite_product_path(product), :class => "like ",  method: :post do %>
-            <i class="fa fa-heart fa-lg"></i><%= product.fans.count %>
+            <i class="fa fa-heart fa-lg"></i>
           <% end %>
         <% end %>
       </span>
