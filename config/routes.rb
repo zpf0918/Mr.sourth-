@@ -19,6 +19,7 @@ namespace :admin do
        post :return
      end
    end
+   resources :categories
 end
 
 namespace :account do
