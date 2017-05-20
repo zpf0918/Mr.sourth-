@@ -46,3 +46,130 @@ html { height: 100%;}
       }
     }
   }
+
+//*------------- 图片轮播 ------------//
+
+.bg-gray {
+    background: #F5F5F5;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    line-height: 1;
+}
+
+//----------- 热门商品 -------------//
+section {
+    padding: 100px 0;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 2em;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+//----------- 我们的优势 ------------//
+
+.pb60 {
+    padding-bottom: 60px;
+}
+
+.pt60 {
+    padding-top: 60px;
+}
+
+.lp .title {
+    font-weight: normal;
+}
+
+.pb50 {
+    padding-bottom: 50px;
+}
+
+.tc {
+    text-align: center;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.bc {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.tc {
+    text-align: center;
+}
+
+.lp-advantage .lp-advantage-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.lp-advantage .lp-advantage-title {
+    color: #444;
+    line-height: 1.2;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.lp-advantage .lp-advantage-desc {
+    line-height: 1.7;
+    letter-spacing: 0;
+    font-size: 16px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
