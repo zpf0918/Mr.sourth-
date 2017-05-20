@@ -23,6 +23,7 @@ end
 
 namespace :account do
   resources :orders
+  resources :users
 end
 
 
@@ -54,5 +55,6 @@ end
       post :apply_to_cancel
     end
   end
+
 
 end

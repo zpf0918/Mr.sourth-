@@ -16,6 +16,7 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  is_admin               :boolean          default(FALSE)
+#  username               :string
 #
 
 class User < ApplicationRecord
@@ -24,7 +25,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
+  mount_uploader :image, ImageUploader
+  
   def admin?
     is_admin
   end
@@ -37,6 +39,14 @@ class User < ApplicationRecord
   end
 
   has_many :orders
+
+  def display_name
+    if self.username.present?
+      self.username
+    else
+      self.email.split("@").first
+    end
+  end
 
 
 end

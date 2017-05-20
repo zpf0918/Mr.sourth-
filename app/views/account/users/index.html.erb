@@ -1,0 +1,23 @@
+<table class="table table-boldered">
+    <thead>
+        <tr>
+            <td>用户名</td>
+            <td>注册邮箱</td>
+            <td>账号设置</td>
+        </tr>
+
+    </thead>
+    <tbody>
+      <tr>
+          <td>
+              <%= current_user.username %>
+          </td>
+          <td>
+              <%= current_user.email %>
+          </td>
+          <td>
+            <%= link_to("编辑个人资料", edit_account_user_path(current_user))%>
+          </td>
+      </tr>
+  </tbody>
+  </table>
