@@ -20,12 +20,21 @@
 @import "font-awesome";
 
 
+//*---- application html------*//
 
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 /*------------- navbar --------------*/
 .nav-logo {
   width: 80%;
   margin-top: 4px;
+}
+
+.navbar {
+  margin-bottom: 0px;
 }
 
 /*------------------------搜索框-------------------------*/
@@ -371,7 +380,7 @@ html { height: 100%;}
   }
 
 
-  
+
 
   /*----------------------登录与注册页面-------------------*/
   .user_setup{
