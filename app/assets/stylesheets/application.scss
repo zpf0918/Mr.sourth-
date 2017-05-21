@@ -79,10 +79,12 @@ html { height: 100%;}
         float: right;
         margin-top: -33px;
         position: relative;
+        color:  #131418;
       }
 
       .account{
         text-align: left;
+
       }
 
       .form-inputs{
@@ -93,6 +95,7 @@ html { height: 100%;}
         text-align: center;
         margin-top: 35px;
         margin-bottom: 25px;
+        color: #fff;
 
         .button{
           color: #fff;
@@ -118,12 +121,6 @@ html { height: 100%;}
   background:  #fff;
 }
 
-.logo {
-  font-size: 36px;
-}
-
-.logo {
-  width: 360px;
-  height: 60px;
-
+.glyphicon.glyphicon-circle-arrow-right{
+  color: rgba(0,204,204,1);
 }
