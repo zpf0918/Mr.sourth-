@@ -21,17 +21,19 @@
 
 
 
-/*------------------------footer置底-------------------------*/
-html { height: 100%;}
-  body { min-height: 100%; display: flex; flex-direction: column;}
-  .content { flex: 1;}
 
 
+
+
+/*------------- navbar --------------*/
+.nav-logo {
+  width: 80%;
+  margin-top: 4px;
+}
 
 /*------------------------搜索框-------------------------*/
 .products-search-form {
     margin-top: 10px;
-    padding-left: 20px;
     width: 290px;
 
   .search-bar {
@@ -47,80 +49,325 @@ html { height: 100%;}
     }
   }
 
-  /*----------------------登录与注册页面-------------------*/
-  .user_setup{
-      height: 850px;
-      background: #fff;
-  }
+//*------------- 图片轮播 ------------//
 
-  @media (min-width: 768px) {
-     .user_setup_content {
-       border-radius: 0; //圆角
-     }
-   }
-  .user_setup_content{
-      background: url("http://ww2.sinaimg.cn/large/006tKfTcgy1ffsz6e0vg6j30go0go0t1.jpg") no-repeat center center ;
-      margin-top: 135px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      // box-shadow: 1px 2px 3px #111;
-      // border: 1px solid #333;
-      // border-radius: 25px;
-
-      opacity:0.95;
-      filter:alpha(opacity=95);
-
-      h3{
-        text-align: left;
-        color: rgba(0,204,204,10);
-      }
-
-      .psw{
-        float: right;
-        margin-top: -33px;
-        position: relative;
-        color:  #131418;
-      }
-
-      .account{
-        text-align: left;
-
-      }
-
-      .form-inputs{
-        margin-top: 25px;
-      }
-
-      .form-actions{
-        text-align: center;
-        margin-top: 35px;
-        margin-bottom: 25px;
-        color: #fff;
-
-        .button{
-          color: #fff;
-          background-color: rgba(0,204,204,0.9);
-          border-color: rgba(0,204,204,0.9);
-          font-size: 20px;
-          letter-spacing: 1px;
-          width: 100%;
-        }
-        .button:hover{
-            background-color: rgba(0,204,204,0.5);
-            border-color: rgba(0,204,204,0.5);
-            color: #fff;
-        }
-      }
-  }
-
-.input-group-addon{
-  background-color: #fff;
+.bg-gray {
+    background: #F5F5F5;
 }
 
-.login{
-  background:  #fff;
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    line-height: 1;
 }
 
-.glyphicon.glyphicon-circle-arrow-right{
-  color: rgba(0,204,204,1);
+//----------- 热门商品 -------------//
+section {
+    padding: 100px 0;
+    background: #E0E0E0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 2em;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+//----------- 我们的优势 ------------//
+
+.pb60 {
+    padding-bottom: 60px;
+}
+
+.pt60 {
+    padding-top: 60px;
+}
+
+.lp .title {
+    font-weight: normal;
+}
+
+.pb50 {
+    padding-bottom: 50px;
+}
+
+.tc {
+    text-align: center;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.bc {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.tc {
+    text-align: center;
+}
+
+.lp-advantage .lp-advantage-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.lp-advantage .lp-advantage-title {
+    color: #444;
+    line-height: 1.2;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.lp-advantage .lp-advantage-desc {
+    line-height: 1.7;
+    letter-spacing: 0;
+    font-size: 16px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+//-------  大师风采 -------------//
+
+.lp-bg-gray {
+    background: #E0E0E0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 -1px 1px rgba(0,0,0,0.1);
+}
+
+.lp .title {
+    font-weight: normal;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.tc {
+    text-align: center;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.tc {
+    text-align: center;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.lp-feedback .home-people .person {
+    display: inline-block;
+    top: 0;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.lp-feedback .home-people .person .avata {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.lp-feedback .home-people .person .avata-wrapper {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    padding: 5px;
+    left: 50%;
+    top: 10px;
+    margin-left: -53px;
+    border: dotted 1px #E6EDEF;
+    border-radius: 53px;
+    overflow: hidden;
+}
+
+.lp-feedback .home-people .person .intro .name {
+    text-align: center;
+}
+
+.lp-feedback .home-people .person .words .bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.lp-feedback .home-people .person .words .content {
+    position: relative;
+    height: 75px;
+    overflow: hidden;
+    font-size: 14px;
+    z-index: 0;
+}
+
+.lp-feedback .home-people .person .words {
+    position: relative;
+    margin-top: 10px;
+    padding: 41px 20px 20px 25px;
+    border-radius: 3px;
+    line-height: 25px;
+    text-align: left;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+
+.lp-feedback .home-people .person .intro {
+    margin-top: 108px;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+//------ 搬运工～ 导购-----//
+
+.lp-action::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.55);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.lp-action .text-content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.pa {
+    position: absolute;
+}
+
+.lp-action p {
+    color: #fff;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.lp-action {
+    background: url(https://ws1.sinaimg.cn/large/006tNc79gy1ffsxd4q52oj30qe0b40x3.jpg) center center no-repeat;
+    height: 200px;
+}
+
+.pr {
+    position: relative;
+}
+
+.tc {
+    text-align: center;
+}
+
+.lp-b-btn {
+
+    background: #00BFA5;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+/*------------------------footer置底-------------------------*/
+html { height: 100%;}
+  body { min-height: 100%; display: flex; flex-direction: column;}
+  .content { flex: 1;}
+
+
+/*----- footer ----*/
+
+.footer {
+    background: #333333;
+    padding: 16px 10px 6px;
+    text-align: center;
+    font-size: 12px;
+    color: #C2C2C2;
+}
+
+.footer span {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 24px;
+    line-height: 23px;
+
 }
