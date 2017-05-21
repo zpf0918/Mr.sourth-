@@ -21,6 +21,11 @@
 
 
 
+/*------------------------footer置底-------------------------*/
+html { height: 100%;}
+  body { min-height: 100%; display: flex; flex-direction: column;}
+  .content { flex: 1;}
+
 
 /*------------- navbar --------------*/
 .nav-logo {
@@ -28,9 +33,11 @@
   margin-top: 4px;
 }
 
+
 /*------------------------搜索框-------------------------*/
 .products-search-form {
     margin-top: 10px;
+    padding-left: 20px;
     width: 290px;
 
   .search-bar {
@@ -45,6 +52,7 @@
       }
     }
   }
+
 
 
 
@@ -313,54 +321,78 @@ img {
     padding-bottom: 20px;
 }
 
-.f16 {
-    font-size: 16px;
+
+  /*----------------------登录与注册页面-------------------*/
+  
+
+  @media (min-width: 768px) {
+     .user_setup_content {
+       border-radius: 0; //圆角
+     }
+   }
+  .user_setup_content{
+      background: url("http://ww2.sinaimg.cn/large/006tKfTcgy1ffsz6e0vg6j30go0go0t1.jpg") no-repeat center center ;
+      margin-top: 135px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      // box-shadow: 1px 2px 3px #111;
+      // border: 1px solid #333;
+      // border-radius: 25px;
+
+      opacity:0.95;
+      filter:alpha(opacity=95);
+
+      h3{
+        text-align: left;
+        color: rgba(0,204,204,10);
+      }
+
+      .psw{
+        float: right;
+        margin-top: -33px;
+        position: relative;
+        color:  #131418;
+      }
+
+      .account{
+        text-align: left;
+
+      }
+
+      .form-inputs{
+        margin-top: 25px;
+      }
+
+      .form-actions{
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 25px;
+        color: #fff;
+
+        .button{
+          color: #fff;
+          background-color: rgba(0,204,204,0.9);
+          border-color: rgba(0,204,204,0.9);
+          font-size: 20px;
+          letter-spacing: 1px;
+          width: 100%;
+        }
+        .button:hover{
+            background-color: rgba(0,204,204,0.5);
+            border-color: rgba(0,204,204,0.5);
+            color: #fff;
+        }
+      }
+  }
+
+.input-group-addon{
+  background-color: #fff;
 }
 
-.btn-lg {
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.3333333;
-    border-radius: 6px;
+.login{
+  background:  #fff;
 }
 
-.lp-action {
-    background: url(https://ws1.sinaimg.cn/large/006tNc79gy1ffsxd4q52oj30qe0b40x3.jpg) center center no-repeat;
-    height: 200px;
-}
-
-.pr {
-    position: relative;
-}
-
-.tc {
-    text-align: center;
-}
-
-.lp-b-btn {
-
-    background: #00BFA5;
-    color: #fff;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-
-/*------------------------footer置底-------------------------*/
-html { height: 100%;}
-  body { min-height: 100%; display: flex; flex-direction: column;}
-  .content { flex: 1;}
-
-
-/*----- footer ----*/
-
-.footer {
-    background: #333333;
-    padding: 16px 10px 6px;
-    text-align: center;
-    font-size: 12px;
-    color: #C2C2C2;
-}
 
 .footer span {
     display: inline-block;
