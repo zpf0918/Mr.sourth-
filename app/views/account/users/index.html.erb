@@ -9,9 +9,13 @@
     </thead>
     <tbody>
       <tr>
-          <td>
+        <td>
+         <% if current_user.username.blank? %>
+              <p>未设置</p>
+          <%else%>
               <%= current_user.username %>
-          </td>
+          <% end %>
+        </td>
           <td>
               <%= current_user.email %>
           </td>
