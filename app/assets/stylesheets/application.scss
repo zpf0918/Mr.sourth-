@@ -59,7 +59,7 @@ html { height: 100%;}
      }
    }
   .user_setup_content{
-      background: #fff;
+      background: url("http://ww2.sinaimg.cn/large/006tKfTcgy1ffsz6e0vg6j30go0go0t1.jpg") no-repeat center center ;
       margin-top: 135px;
       padding-top: 20px;
       padding-bottom: 20px;
@@ -95,15 +95,15 @@ html { height: 100%;}
 
         .button{
           color: #fff;
-          background-color: rgba(144,179,133,0.9);
-          border-color: rgba(144,179,133,0.9);
+          background-color: rgba(0,204,204,0.9);
+          border-color: rgba(0,204,204,0.9);
           font-size: 20px;
           letter-spacing: 1px;
           width: 100%;
         }
         .button:hover{
-            background-color: rgba(213,224,216,0.9);
-            border-color: rgba(213,224,216,0.9);
+            background-color: rgba(213,250,216,0.9);
+            border-color: rgba(213,250,216,0.9);
             color: #fff;
         }
       }
@@ -114,5 +114,5 @@ html { height: 100%;}
 }
 
 .login{
-  background:  rgba(213,224,216,0.9);
+  background:  #fff;
 }
