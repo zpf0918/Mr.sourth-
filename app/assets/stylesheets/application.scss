@@ -50,7 +50,7 @@ html { height: 100%;}
   /*----------------------登录与注册页面-------------------*/
   .user_setup{
       height: 850px;
-
+      background: #fff;
   }
 
   @media (min-width: 768px) {
@@ -95,15 +95,15 @@ html { height: 100%;}
 
         .button{
           color: #fff;
-          background-color: #673AB7;
-          border-color: #673AB7;
+          background-color: rgba(144,179,133,0.9);
+          border-color: rgba(144,179,133,0.9);
           font-size: 20px;
           letter-spacing: 1px;
           width: 100%;
         }
         .button:hover{
-            background-color: #9b59b6;
-            border-color: #9b59b6;
+            background-color: rgba(213,224,216,0.9);
+            border-color: rgba(213,224,216,0.9);
             color: #fff;
         }
       }
@@ -111,4 +111,8 @@ html { height: 100%;}
 
 .input-group-addon{
   background-color: #fff;
+}
+
+.login{
+  background:  rgba(213,224,216,0.9);
 }
