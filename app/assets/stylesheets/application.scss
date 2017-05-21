@@ -46,3 +46,69 @@ html { height: 100%;}
       }
     }
   }
+
+  /*----------------------登录与注册页面-------------------*/
+  .user_setup{
+      height: 850px;
+
+  }
+
+  @media (min-width: 768px) {
+     .user_setup_content {
+       border-radius: 0; //圆角
+     }
+   }
+  .user_setup_content{
+      background: #fff;
+      margin-top: 135px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      // box-shadow: 1px 2px 3px #111;
+      // border: 1px solid #333;
+      // border-radius: 25px;
+
+      opacity:0.95;
+      filter:alpha(opacity=95);
+
+      h3{
+        text-align: left;
+      }
+
+      .psw{
+        float: right;
+        margin-top: -33px;
+        position: relative;
+      }
+
+      .account{
+        text-align: left;
+      }
+
+      .form-inputs{
+        margin-top: 25px;
+      }
+
+      .form-actions{
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 25px;
+
+        .button{
+          color: #fff;
+          background-color: #673AB7;
+          border-color: #673AB7;
+          font-size: 20px;
+          letter-spacing: 1px;
+          width: 100%;
+        }
+        .button:hover{
+            background-color: #9b59b6;
+            border-color: #9b59b6;
+            color: #fff;
+        }
+      }
+  }
+
+.input-group-addon{
+  background-color: #fff;
+}
