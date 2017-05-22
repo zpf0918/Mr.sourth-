@@ -22,6 +22,17 @@
 
 //*---- application html------*//
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%; display: flex; flex-direction: column;  //footer 置底代码
+}
+
+.content { flex: 1;}  //footer 置底代码
+
+
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
@@ -355,10 +366,6 @@ img {
 }
 
 
-/*------------------------footer置底-------------------------*/
-html { height: 100%;}
-  body { min-height: 100%; display: flex; flex-direction: column;}
-  .content { flex: 1;}
 
 
 /*----- footer ----*/
@@ -461,3 +468,58 @@ html { height: 100%;}
   height: 60px;
 
 }
+
+/*------商品展示页-----*/
+
+.product-content img {
+    width: 100%;
+    margin: 7.5px auto 7.5px auto;
+  }
+
+  .product-info {
+     text-align: left;
+     line-height: 14px;
+     min-height: 55px;
+   }
+
+.product-box {
+  text-align: center;
+  padding: 0 0 100px 0;
+  background: #F5F5F5;
+
+.background-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  p{
+    color: #e74c3c !important;
+  }
+
+  a{
+    color: #666 !important;
+  }
+
+  a:hover {
+  color: #e74c3c !important; //鼠标点击商品名称反馈
+
+  img {
+    opacity: 0.8; //鼠标放在图片上的显示
+  }
+}
+}
+
+
+/*------------ 分页按钮设定---------------*/
+  .page-box {
+    margin-top: 75px;
+
+    a {
+      background-color: #fff;
+    }
+
+    a:hover {
+      background-color: #ddd;
+      color: #666 !important;
+    }
+  }

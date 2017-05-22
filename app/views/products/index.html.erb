@@ -1,17 +1,32 @@
-
-<div class="productList-wrap mt30 bc">
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-xs-6 col-md-3">
-        <%= link_to product_path(product) do %>
-          <% if product.image.present? %>
-            <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-          <% else %>
-            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-          <% end %>
-        <% end %>
-        <%= product.title %> ￥ <%= product.price %>
+<div class="product-box">
+  <div class="container">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1ffuhhtktdvj30vy0eita0.jpg">
       </div>
-    <% end %>
+    </div>
+    <div class="productList-wrap mt30 bc">
+      <div class="row">
+        <% @products.each do |product| %>
+          <div class="col-xs-6 col-md-3 product-content">
+            <%= link_to product_path(product) do %>
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+              <% end %>
+            <% end %>
+            <div class="product-info">
+              <p>  <%= link_to(product.title , product_path(product)) %></p>
+              <p>$ <%= product.price %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="page-box">
+      <%= will_paginate @products, renderer: BootstrapPagination::Rails, :previous_label => t('上一页'), :next_label => t('下一页') %>
+    </div>
   </div>
 </div>

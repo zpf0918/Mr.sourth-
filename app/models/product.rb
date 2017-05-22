@@ -18,8 +18,7 @@ class Product < ApplicationRecord
   acts_as_list
 
   validates :title, presence: true
-  validates :image, presence: true
-
+  
   has_many :favorites
   has_many :fans, through: :favorites, source: :user
 
@@ -28,5 +27,7 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
+  # Scope #
+  scope :recent, -> { order('created_at DESC') }
 
 end
