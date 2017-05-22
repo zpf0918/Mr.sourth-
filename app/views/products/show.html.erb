@@ -1,54 +1,91 @@
-<div class="row">
-  <div class="col-md-6">
-    <% if @photos.present? %>
-     <% @photos.each_with_index do |p, index| %>
-       <% if index == 0 %>
-         <%= image_tag p.avatar.medium.url %>
-         <div style="letter-spacing: -8px">
-       <% else %>
-         <%= image_tag p.avatar.thumb.url %>
-       <% end %>
-     <% end %>
-     </div>
-   <% else %>
-       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-   <% end %>>
-  </div>
-  <div class="col-md-6">
-    <h2> <%= @product.title %> </h2>
-    <div style="height:100px;">
-      <p>
-        <%= @product.description %>
-      </p>
-    </div>
-    <div> 数量 : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
-      <% if @product.quantity.present? && @product.quantity > 0 %>
-       <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-      <% else %>
-       已销售一空，无法购买
-     <% end %>
-    </div>
-    <!--     收藏功能         -->
-    <div class="col-md-2">
+<div class="show-page detail mt20 w1200 bc pb50">
+  <div class="intro clearfix">
+          <div class="cover fl">
 
-      <% if user_signed_in? %>
-        <% if !current_user.is_favorite_of?(@product) %>
-           <%= link_to favorite_product_path(@product), :class => "like btn btn-default", method: :post do %>
-            <i class="fa  fa-star-o fa-lg"></i>
-           <% end %>
-        <% else %>
-           <%= link_to unfavorite_product_path(@product), :class => "unlike btn btn-default", method: :post do %>
-            <i class="fa fa-star fa-lg"></i>
-          <% end %>
-        <% end %>
-     <% else %>
-      <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
-        <i class="fa fa-heart fa-lg"></i>
-      <% end %>
-     <% end %>
-    </div>
-    <!-- end -->
+            <!-- 商品大图 --->
+            <div class="intro-bigPic border pr">
+              <% if @photos.present? %>
+               <% @photos.each_with_index do |p, index| %>
+                 <% if index == 0 %>
+                   <%= image_tag p.avatar.medium.url %>
+
+                 <% else %>
+                   <%= image_tag p.avatar.thumb.url %>
+                 <% end %>
+               <% end %>
+
+             <% else %>
+                 <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+             <% end %>>
+           </div>
+
+           <!-- 商品小图 -->
+           <!-- <ul class="intro-preview clearfix">
+             <% if @photos.present? %>
+               <% @photos.each_with_index do |p, index| %>
+                 <% if index == 0 %>
+                   <li class="border intro-preview-item intro-preview-activeItem fl">
+                 <% else %>
+                   <li class="border intro-preview-item fl">
+                 <% end %>
+                 <% if index < 5 %>
+                   <%= image_tag p.avatar.medium.url %>
+                 <% end %>
+                 </li>
+               <% end %>
+             <% end %>
+           </ul> -->
+
+             <!--     收藏功能         -->
+             <p class="mt20">
+               <% if user_signed_in? %>
+                 <% if !current_user.is_favorite_of?(@product) %>
+                    <%= link_to favorite_product_path(@product), :class => "like btn btn-default", method: :post do %>
+                     <i class="fa  fa-star-o fa-lg"></i>
+                    <% end %>
+                 <% else %>
+                    <%= link_to unfavorite_product_path(@product), :class => "unlike btn btn-default", method: :post do %>
+                     <i class="fa fa-star fa-lg"></i>
+                   <% end %>
+                 <% end %>
+              <% else %>
+               <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
+                 <i class="fa fa-heart fa-lg"></i>
+               <% end %>
+              <% end %>
+            </p>
+             <!-- end -->
+        </div>
+
+            <!-- 商品明细 --->
+
+          <div class="intro-text fr">
+              <h3 class="f20 ell fb"> <%= @product.title %> </h3>
+
+              <p class="intro-text-desc"><%= @product.description %></p>
+
+              <p class="intro-text-value bg-gray">
+                <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
+              </p>
+
+              <p class="intro-text-service">
+                <span class="pl20 pr30">运费</span><span>满199元包邮</span>
+              </p>
+
+              <p class="intro-text-count">
+                <span class="pl20 pr30">库存</span><%= @product.quantity %><span></span>
+              </p>
+
+              <p class="intro-text-btnWrap">
+                <% if @product.quantity.present? && @product.quantity > 0 %>
+                  <%= link_to("加入购物车", add_to_cart_product_path(@product),
+                      :method => :post,
+                      :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red") %>
+              <% else %>
+                <a class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red">已售完</a>
+              <% end %>
+              </p>
+            </div>
+
+      </div>
   </div>
-</div>

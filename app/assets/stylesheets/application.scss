@@ -379,9 +379,152 @@ html { height: 100%;}
     line-height: 23px;
   }
 
+/*---------------------- products/show -------------------*/
+
+.fl {
+    float: left;
+    display: inline;
+}
+
+.border {
+    border: 1px solid #DDDDDD;
+}
+
+.pr {
+    position: relative;
+}
+
+.intro-bigPic {
+    width: 420px;
+    // height: 420px;
+}
+
+.border {
+    border: 1px solid #DDDDDD;
+}
+
+.magnifier-preview {
+    position: absolute;
+    width: 418px;
+    height: 420px;
+    left: 418px;
+    top: -1px;
+    padding: 0;
+    z-index: 1000;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.magnifier-thumb-wrapper {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.intro-preview .intro-preview-activeItem {
+    border-color: #DB3652;
+}
+
+.fr {
+    float: right;
+    display: inline;
+}
+
+.intro-text {
+    width: 744px;
+}
 
 
+.intro-text h3 {
+    margin-top: 0;
+    line-height: 30px;
+}
 
+.ell {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+}
+
+.fb {
+    font-weight: bold;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.intro-text-desc {
+    margin-top: 7px;
+}
+
+
+.bg-gray {
+    background: #F5F5F5;
+}
+
+.intro-text-value {
+    height: 60px;
+    line-height: 60px;
+}
+
+.intro-text-service {
+    height: 50px;
+    line-height: 50px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.col-red {
+    color: #d32048;
+}
+
+
+.f24 {
+    font-size: 24px;
+}
+
+.intro-text-btn.add-cart {
+    color: #fff;
+}
+
+.bg-red {
+    background: #D32048;
+}
+
+.intro-text-btn {
+    display: block;
+    width: 178px;
+    height: 48px;
+    line-height: 45px;
+    border: 1px solid #d32048;
+    font-family: "Microsoft Yahei",simhei;
+    border-radius: 50px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.show-page {
+    width: 1200px;
+}
   /*----------------------登录与注册页面-------------------*/
   .user_setup{
       height: 850px;
