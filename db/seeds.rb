@@ -47,7 +47,8 @@ Product.create!(
    title: "斗笠杯",
    description: "斗笠杯",
    price: 300,
-   quantity: 10
+   quantity: 10,
+   image: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv51vo3wkj30m80m8gyw.jpg")
 )
 Photo.create!(product_id:1,avatar: open(File.join(Rails.root, "/app/assets/images/1-1.jpg")))
 
