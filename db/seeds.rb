@@ -41,7 +41,7 @@ else
   puts "Admin 已经建立过了，脚本跳过该步骤。"
 end
 
-
+# 执行seed后记得要去添加分类哦，不然有时会报错
 Product.create!(
    id: 1,
    title: "斗笠杯",
@@ -176,7 +176,7 @@ Photo.create!(product_id:11,avatar: open("https://ws1.sinaimg.cn/large/006tNc79g
 Product.create!(
     id: 12,
     title: "茶台",
-    category_id: 2,
+    category_id: 1,
     description: "茶台",
     price: 50,
     quantity: 20,
@@ -188,7 +188,7 @@ Photo.create!(product_id:12,avatar: open("https://ws1.sinaimg.cn/large/006tKfTcg
 Product.create!(
     id: 13,
     title: "茶盘",
-    category_id: 2,
+    category_id: 1,
     description: "重竹制茶盘",
     price: 50,
     quantity: 20,
