@@ -46,8 +46,11 @@ gem 'ransack'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
+# 七牛
+gem 'carrierwave-qiniu'
+gem 'qiniu-rs'
+
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
   gem 'awesome_rails_console'
   gem 'sqlite3'
