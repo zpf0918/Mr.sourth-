@@ -50,6 +50,8 @@ gem 'will_paginate-bootstrap'
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 
+gem 'figaro'
+
 group :development, :test do
   gem 'pry'
   gem 'awesome_rails_console'
