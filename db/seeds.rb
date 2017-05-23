@@ -161,16 +161,6 @@ Photo.create!(product_id:10,avatar: open("https://ws1.sinaimg.cn/large/006tNc79g
 
 
 
-Product.create!(
-    id: 11,
-    title: "白牡丹",
-    category_id: 2,
-    description: "白牡丹",
-    price: 50,
-    quantity: 20,
-    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg")
-)
-Photo.create!(product_id:11,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg"))
 
 
 Product.create!(
@@ -221,3 +211,15 @@ Product.create!(
     image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6g5516ej30ly0qo0vv.jpg")
 )
 Photo.create!(product_id:15,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6g5516ej30ly0qo0vv.jpg"))
+
+
+Product.create!(
+    id: 16,
+    title: "白牡丹",
+    category_id: 2,
+    description: "白牡丹",
+    price: 50,
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg")
+)
+Photo.create!(product_id:16,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg"))
