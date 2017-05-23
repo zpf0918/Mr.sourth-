@@ -112,7 +112,7 @@ Photo.create!(product_id:6,avatar: open("https://ws2.sinaimg.cn/large/006tNc79gy
 
 
 Product.create!(
-    id: 7,
+    id: 11,
     title: "汝壶",
     category_id: 1,
     description: "汝瓷开片石瓢壶冰裂功夫茶具",
@@ -120,7 +120,7 @@ Product.create!(
     quantity: 30,
     image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv62ec6cvj30m80m8k07.jpg")
 )
-Photo.create!(product_id:7,avatar: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv62ec6cvj30m80m8k07.jpg"))
+Photo.create!(product_id:11,avatar: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv62ec6cvj30m80m8k07.jpg"))
 
 
 Product.create!(
