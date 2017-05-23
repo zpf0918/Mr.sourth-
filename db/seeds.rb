@@ -42,11 +42,14 @@ else
 end
 
 
-Product.create!(title: "斗笠杯",
+Product.create!(
+   id: 1,
+   title: "斗笠杯",
    description: "斗笠杯",
    price: 300,
    quantity: 10
 )
+Photo.create!(product_id:1,avatar: open(File.join(Rails.root, "/app/assets/images/1-1.jpg")))
 
 Product.create!(title: "青瓷斗笠杯",
     description: "斗笠杯",
