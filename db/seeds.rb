@@ -73,70 +73,113 @@ Product.create!(
 )
 Photo.create!(product_id:3,avatar: open(File.join(Rails.root, "/app/assets/images/3-1.jpg")))
 
-Product.create!(title: "花瓣杯",
+Product.create!(
+    id: 4,
+    title: "花瓣杯",
     description: "花瓣杯",
     price: 200,
-    quantity: 10
+    quantity: 10,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv5ws3edsj30m80m8gol.jpg")
 )
+Photo.create!(product_id:4,avatar: open(File.join(Rails.root, "/app/assets/images/4-1.jpg")))
 
-Product.create!(title: "口福",
+
+Product.create!(
+    id: 5,
+    title: "口福",
     description: "口福杯",
     price: 100,
-    quantity: 50
+    quantity: 50,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv5yaawflj30m80m84ax.jpg")
 )
+Photo.create!(product_id:5,avatar: open(File.join(Rails.root, "/app/assets/images/5-1.jpg")))
 
-Product.create!(title: "斗笠杯-汤水",
+Product.create!(
+    id: 6,
+    title: "斗笠杯-汤水",
     description: "斗笠杯-汤水",
     price: 400,
-    quantity: 10
-
+    quantity: 10,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv60wew78j30m80m8ar8.jpg")
 )
+Photo.create!(product_id:6,avatar: open(File.join(Rails.root, "/app/assets/images/6-1.jpg")))
 
-Product.create!(title: "汝壶",
+
+Product.create!(
+    id: 7,
+    title: "汝壶",
     description: "汝瓷开片石瓢壶冰裂功夫茶具",
     price: 600,
-    quantity: 30
-
+    quantity: 30,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv62ec6cvj30m80m8k07.jpg")
 )
+Photo.create!(product_id:7,avatar: open(File.join(Rails.root, "/app/assets/images/7-1.jpg")))
 
-Product.create!(title: "青瓷葫芦",
+
+Product.create!(
+    id: 8,
+    title: "青瓷葫芦",
     description: "青瓷葫芦",
     price: 800,
-    quantity: 5
-
+    quantity: 5,
+    image: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv646jib1j30m80m87cy.jpg")
 )
+Photo.create!(product_id:8,avatar: open(File.join(Rails.root, "/app/assets/images/8-1.jpg")))
 
-Product.create!(title: "汝壶",
-    description: "汝瓷开片石瓢壶冰裂功夫茶具",
+
+Product.create!(
+    id: 9,
+    title: "七泉瓶",
+    description: "七泉瓶",
     price: 600,
-    quantity: 30
-
+    quantity: 30,
+    image: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv66gsz72j30m80m8qb9.jpg")
 )
+Photo.create!(product_id:9,avatar: open(File.join(Rails.root, "/app/assets/images/9-1.jpg")))
 
-Product.create!(title: "汝窑系列",
-    description: "汝窑系列，手工打磨更精细",
+
+
+Product.create!(
+    id: 10,
+    title: "影青瓷",
+    description: "影青瓷三才盖碗",
     price: 800,
-    quantity: 20
-
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv69rznwdj30m80m8qaf.jpg")
 )
+Photo.create!(product_id:10,avatar: open(File.join(Rails.root, "/app/assets/images/10-1.jpg")))
 
-Product.create!(title: "白牡丹",
+
+
+Product.create!(
+    id: 11,
+    title: "白牡丹",
     description: "白牡丹",
     price: 50,
-    quantity: 20
-
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg")
 )
+Photo.create!(product_id:11,avatar: open(File.join(Rails.root, "/app/assets/images/11-1.png")))
 
-Product.create!(title: "武夷肉桂",
+
+
+Product.create!(
+    id: 12,
+    title: "武夷肉桂",
     description: "武夷肉桂",
     price: 100,
     quantity: 20
-
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6eh74lxj30ly0qoq7e.jpg")
 )
+Photo.create!(product_id:12,avatar: open(File.join(Rails.root, "/app/assets/images/12-1.png")))
 
-Product.create!(title: "日月潭红茶",
+
+Product.create!(
+    id: 13,
+    title: "日月潭红茶",
     description: "日月潭红茶",
     price: 150,
     quantity: 20
-
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6g5516ej30ly0qo0vv.jpg")
 )
+Photo.create!(product_id:13,avatar: open(File.join(Rails.root, "/app/assets/images/13-1.png")))
