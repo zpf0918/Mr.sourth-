@@ -159,7 +159,7 @@ Product.create!(
     quantity: 20,
     image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg")
 )
-Photo.create!(product_id:11,avatar: open(File.join(Rails.root, "/app/assets/images/11-1.png")))
+Photo.create!(product_id:11,avatar: open(File.join(Rails.root, "/app/assets/images/11-1.jpg")))
 
 
 
@@ -168,10 +168,10 @@ Product.create!(
     title: "武夷肉桂",
     description: "武夷肉桂",
     price: 100,
-    quantity: 20
+    quantity: 20,
     image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6eh74lxj30ly0qoq7e.jpg")
 )
-Photo.create!(product_id:12,avatar: open(File.join(Rails.root, "/app/assets/images/12-1.png")))
+Photo.create!(product_id:12,avatar: open(File.join(Rails.root, "/app/assets/images/12-1.jpg")))
 
 
 Product.create!(
@@ -179,7 +179,7 @@ Product.create!(
     title: "日月潭红茶",
     description: "日月潭红茶",
     price: 150,
-    quantity: 20
+    quantity: 20,
     image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6g5516ej30ly0qo0vv.jpg")
 )
-Photo.create!(product_id:13,avatar: open(File.join(Rails.root, "/app/assets/images/13-1.png")))
+Photo.create!(product_id:13,avatar: open(File.join(Rails.root, "/app/assets/images/13-1.jpg")))
