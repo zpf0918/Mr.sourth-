@@ -61,7 +61,7 @@ Product.create!(
     quantity: 10,
     image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv56pzs1rj30m80m8tfo.jpg")
 )
-Photo.create!(product_id:2,avatar: open(File.join(Rails.root, "/app/assets/images/1-2.jpg")))
+Photo.create!(product_id:2,avatar: open(File.join(Rails.root, "/app/assets/images/2-1.jpg")))
 
 Product.create!(
     id: 3,
@@ -71,7 +71,7 @@ Product.create!(
     quantity: 20,
     image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv594l0b4j30m80m8139.jpg")
 )
-Photo.create!(product_id:2,avatar: open(File.join(Rails.root, "/app/assets/images/1-2.jpg")))
+Photo.create!(product_id:3,avatar: open(File.join(Rails.root, "/app/assets/images/3-1.jpg")))
 
 Product.create!(title: "花瓣杯",
     description: "花瓣杯",
