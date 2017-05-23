@@ -52,16 +52,26 @@ Product.create!(
 )
 Photo.create!(product_id:1,avatar: open(File.join(Rails.root, "/app/assets/images/1-1.jpg")))
 
-Product.create!(title: "青瓷斗笠杯",
+
+Product.create!(
+    id: 2,
+    title: "青瓷斗笠杯",
     description: "斗笠杯",
     price: 350,
-    quantity: 10
+    quantity: 10,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv56pzs1rj30m80m8tfo.jpg")
 )
+Photo.create!(product_id:2,avatar: open(File.join(Rails.root, "/app/assets/images/1-2.jpg")))
 
-Product.create!(title: "功夫茶具",
+Product.create!(
+    id: 3,
+    title: "功夫茶具",
     description: "功夫茶具，配件",
     price: 150,
-    quantity: 20
+    quantity: 20,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv594l0b4j30m80m8139.jpg")
+    Photo.create!(product_id:2,avatar: open(File.join(Rails.root, "/app/assets/images/1-2.jpg")))
+
 )
 
 Product.create!(title: "花瓣杯",
