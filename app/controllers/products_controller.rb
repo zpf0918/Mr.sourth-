@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
       @products = Product.all.order("position ASC").recent.paginate(:page => params[:page], :per_page => 12)
     else
       @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(:category_id => @category_id)
+      @products = Product.where(:category_id => @category_id).recent.paginate(:page => params[:page], :per_page => 12)
     end
   end
 
