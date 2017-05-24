@@ -19,23 +19,6 @@
              <% end %>>
            </div>
 
-           <!-- 商品小图 -->
-           <!-- <ul class="intro-preview clearfix">
-             <% if @photos.present? %>
-               <% @photos.each_with_index do |p, index| %>
-                 <% if index == 0 %>
-                   <li class="border intro-preview-item intro-preview-activeItem fl">
-                 <% else %>
-                   <li class="border intro-preview-item fl">
-                 <% end %>
-                 <% if index < 5 %>
-                   <%= image_tag p.avatar.medium.url %>
-                 <% end %>
-                 </li>
-               <% end %>
-             <% end %>
-           </ul> -->
-
              <!--     收藏功能         -->
              <p class="mt20">
                <% if user_signed_in? %>
