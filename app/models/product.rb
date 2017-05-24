@@ -29,7 +29,7 @@ class Product < ApplicationRecord
 
   # Scope #
   scope :recent, -> { order('created_at DESC') }
-  scope :publised, -> { where(is_hidden: false)}
+  scope :published, -> { where(is_hidden: false)}
 
 
   # 管理员上下架商品
