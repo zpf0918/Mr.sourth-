@@ -52,6 +52,9 @@ gem 'qiniu-rs'
 
 gem 'figaro'
 
+#理清model关系的gem
+gem 'rails-erd'
+
 group :development, :test do
   gem 'pry'
   gem 'awesome_rails_console'
