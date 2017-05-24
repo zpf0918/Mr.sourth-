@@ -18,7 +18,7 @@ class Product < ApplicationRecord
   acts_as_list
 
   validates :title, presence: true
-  
+
   has_many :favorites
   has_many :fans, through: :favorites, source: :user
 
@@ -29,5 +29,17 @@ class Product < ApplicationRecord
 
   # Scope #
   scope :recent, -> { order('created_at DESC') }
+
+
+  # 管理员上下架商品
+  def publish!
+    self.is_hidden = false
+    self.save
+  end
+
+  def hide!
+   self.is_hidden = true
+   self.save
+  end
 
 end

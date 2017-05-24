@@ -20,6 +20,11 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @photos = @product.photos.all
+
+    if @product.is_hidden
+      flash[:warning] = "此商品已下架"
+      redirect_to products_path
+    end
   end
 
 
@@ -47,6 +52,8 @@ class ProductsController < ApplicationController
     flash[:warning] = "您已取消收藏宝贝"
 		redirect_to :back
 	end
+
+
 
 
 protected

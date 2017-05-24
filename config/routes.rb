@@ -9,6 +9,8 @@ namespace :admin do
      member do
        patch :move_up
        patch :move_down
+       post  :publish
+       post  :hide
      end
    end
    resources :orders do
