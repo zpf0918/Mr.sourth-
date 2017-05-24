@@ -205,7 +205,7 @@ img {
     font-weight: normal;
 }
 
-.pb20 {
+.lp {
     padding-bottom: 20px;
 }
 
@@ -355,12 +355,15 @@ img {
 
 .lp-b-btn {
 
-    background: #00BFA5;
+    background: rgba(66,36,27,2);
     color: #fff;
     letter-spacing: 2px;
     font-weight: bold;
 }
 
+.lp-b-btn a:hover{
+   color: #ecf0f1 !important;
+}
 
 
 
@@ -536,7 +539,7 @@ img {
   }
 
 
-
+  //这块内容先保留，请别删除
   // .logo-box {
   //   margin-right: 15px;
     // font-family: '行书简体'; /* 自己下载的字形 */
