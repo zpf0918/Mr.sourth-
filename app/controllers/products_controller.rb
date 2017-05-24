@@ -10,10 +10,10 @@ class ProductsController < ApplicationController
 
   def index
     if params[:category].blank?
-      @products = Product.all.order("position ASC").recent.paginate(:page => params[:page], :per_page => 12)
+      @products = Product.where(:is_hidden => false).order("position ASC").recent.paginate(:page => params[:page], :per_page => 12)
     else
       @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(:category_id => @category_id).recent.paginate(:page => params[:page], :per_page => 12)
+      @products = Product.where(:category_id => @category_id).where(:is_hidden => false).recent.paginate(:page => params[:page], :per_page => 12)
     end
   end
 

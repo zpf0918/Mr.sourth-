@@ -34,6 +34,10 @@
     <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]"%>
   </div>
 
+  <div class="group">
+    <%= f.input :is_hidden %>
+  </div>
+
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
 <% end %>
