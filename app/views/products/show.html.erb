@@ -3,21 +3,36 @@
           <div class="cover fl">
 
             <!-- 商品大图 --->
-            <div class="intro-bigPic border pr">
+              <div class="intro-bigPic border pr">
+                <div class="magnifier-preview border" id="preview"></div>
+                <% if @photos.present? %>
+                    <!-- <a class="magnifier-thumb-wrapper" href="javascript:;"> -->
+                      <img
+                        id="thumb"
+                        src="<%= @photos.first.avatar.medium.url %>"
+                        data-large-img-wrapper="preview"
+                        data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+                    </a>
+                <% end %>
+              </div>
+
+            <ul class="intro-preview clearfix">
               <% if @photos.present? %>
                <% @photos.each_with_index do |p, index| %>
                  <% if index == 0 %>
-                   <%= image_tag p.avatar.medium.url %>
+                    <li class="border intro-preview-item intro-preview-activeItem fl">
 
                  <% else %>
-                   <%= image_tag p.avatar.thumb.url %>
+                    <li class="border intro-preview-item fl">
                  <% end %>
-               <% end %>
 
-             <% else %>
-                 <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+                 <% if index < 5 %>
+                   <%= image_tag p.avatar.thumb.url %>
+              <% end %>
+                   </li>
+              <% end %>
              <% end %>>
-           </div>
+           </ul>
 
              <!--     收藏功能         -->
              <p class="mt20">
