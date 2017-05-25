@@ -55,6 +55,8 @@ gem 'figaro'
 #理清model关系的gem
 gem 'rails-erd'
 
+gem 'jquery-turbolinks'
+
 group :development, :test do
   gem 'pry'
   gem 'awesome_rails_console'
