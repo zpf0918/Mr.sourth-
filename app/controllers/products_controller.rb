@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
         when 'by_product_price'
           Product.published.order('price DESC').paginate(:page => params[:page], :per_page => 12)
         when 'by_fans'
-          Product.published.all.sort_by{|product| product.fans.count}.reverse.paginate(:page => params[:page], :per_page => 12)
+          Product.published.all.order("position ASC").paginate(:page => params[:page], :per_page => 12)
         else
           Product.published.recent.paginate(:page => params[:page], :per_page => 12)
         end
