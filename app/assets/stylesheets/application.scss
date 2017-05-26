@@ -665,6 +665,12 @@ img {
       background-color: #ddd;
       color: #666 !important;
     }
+    .pagination > .active > span{
+      z-index: 3;
+      color: #fff;
+      background-color: rgb(66,36,27);
+      border-color: rgb(66,36,27);
+    }
   }
 
   /*------------logo字体------------------*/
