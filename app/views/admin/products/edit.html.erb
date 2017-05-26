@@ -35,7 +35,7 @@
 
    <div class="group">
      <%= f.input :image, :label => "封面图片", as: :file%>
-     <%= f.label :avatar   %><br>
+     <%= f.label :avatar, :label => "多图上传" %><br>
      <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]"%>
    </div>
 

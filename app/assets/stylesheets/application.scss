@@ -387,6 +387,7 @@ img {
 
 /*---------------------- products/show -------------------*/
 
+
 .fl {
     float: left;
     display: inline;
@@ -402,7 +403,16 @@ img {
 
 .intro-bigPic {
     width: 420px;
-    // height: 420px;
+    height: 420px;
+}
+
+.intro-bigPic img {
+    width: 100%;
+}
+
+.intro-preview {
+    margin-top: 15px;
+    padding-left: 0px;
 }
 
 .border {
@@ -438,7 +448,7 @@ img {
 }
 
 .intro-text {
-    width: 744px;
+    width: 730px;
 }
 
 
@@ -521,7 +531,7 @@ img {
 }
 
 .pl15 {
-    padding-left: 15px;
+    padding-left: 15px
 }
 
 .ml20 {
@@ -531,6 +541,27 @@ img {
 .show-page {
     width: 1200px;
 }
+
+.intro-preview .intro-preview-item img {
+    width: 70px;
+    height: 70px;
+}
+
+.intro-preview .intro-preview-item {
+    padding: 1px;
+    margin-right: 13px;
+    overflow: hidden;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.show-page {
+    width: 1200px;
+}
+
+
   /*----------------------登录与注册页面-------------------*/
   .user_setup{
       height: 850px;
@@ -611,6 +642,7 @@ img {
   height: 60px;
 
 }
+
 
 /*------商品展示页-----*/
 
