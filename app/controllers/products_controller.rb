@@ -9,12 +9,22 @@ class ProductsController < ApplicationController
   end
 
   def index
-    if params[:category].blank?
-      @products = Product.published.order("position ASC").recent.paginate(:page => params[:page], :per_page => 12)
-    else
-      @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(:category_id => @category_id).published.recent.paginate(:page => params[:page], :per_page => 12)
-    end
+    @product = Product.all
+    @products = case params[:order]
+                when 'by_product_price'
+                  Product.published.order('price DESC').paginate(:page => params[:page], :per_page => 12)
+                when 'by_product_quantity'
+                  Product.published.sort_by{|product| product.users.count}.reverse.paginate(:page => params[:page], :per_page => 12)
+                else
+                  Product.published.recent.paginate(:page => params[:page], :per_page => 12)
+                end
+
+                if params[:category].blank?
+                  @products = Product.published.order("position ASC").recent.paginate(:page => params[:page], :per_page => 12)
+                else
+                  @category_id = Category.find_by(name: params[:category]).id
+                  @products = Product.where(:category_id => @category_id).published.recent.paginate(:page => params[:page], :per_page => 12)
+                end
   end
 
   def show
