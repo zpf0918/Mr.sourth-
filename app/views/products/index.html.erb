@@ -19,7 +19,7 @@
           <%= link_to("价格", products_path(:order => "by_product_price")) %>
         </li>
         <li>
-            <%= link_to("人气", products_path(:order => "by_product_quantity")) %>
+            <%= link_to("人气", products_path(:order => "by_fans")) %>
         </li>
 
       </ul>
@@ -46,13 +46,8 @@
     </div>
 
    <!-- 分页样式 -->
-    <div class="page-box">
-      <ul class="pagination">
-        <li class="prev"><a rel="prev" href="/products?page=1"><span class="fa fa-angle-left"></span></a></li>
-        <li><a rel="prev" href="/products?page=1">1</a></li>
-        <li><a rel="prev" href="/products?page=2">2</a></li>
-        <li class="next"><a rel="next" href="/products?page=2"><span class="fa fa-angle-right"></span></a></li>
-      </ul>
+     <div class="page-box">
+      <%= will_paginate @products, renderer: BootstrapPagination::Rails, :previous_label => t('上一页'), :next_label => t('下一页') %>
     </div>
   </div>
 </div>
