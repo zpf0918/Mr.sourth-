@@ -386,10 +386,6 @@ html { height: 100%;}
     display: inline;
 }
 
-.border {
-    border: 1px solid #DDDDDD;
-}
-
 .pr {
     position: relative;
 }
@@ -441,7 +437,7 @@ html { height: 100%;}
 }
 
 .intro-text {
-    width: 744px;
+    width: 730px;
 }
 
 
@@ -492,10 +488,15 @@ html { height: 100%;}
     padding-left: 20px;
 }
 
-.col-red {
-    color: #d32048;
+.col-black {
+    color: #222;
 }
 
+.cart_delete {
+  padding-right: 15px;
+  margin-top: 20px;
+
+}
 
 .f24 {
     font-size: 24px;
@@ -544,6 +545,127 @@ html { height: 100%;}
     padding: 1px;
     margin-right: 13px;
     overflow: hidden;
+}
+
+
+/*---------------- 购物车首页 ----------------------*/
+
+.w1200 {
+    width: 1200px;
+}
+
+
+.logo {
+    width: 360px;
+    height: 60px;
+    font-size: 36px;
+}
+
+.cartProducts-title {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 0px;
+    color: #9d9d9d;
+}
+
+.cartProducts-title-msg {
+    width: 425px;
+}
+
+.cartProducts-title-price {
+    width: 143px;
+}
+
+.cartProducts-title-quantity {
+    width: 280px;
+}
+
+.cartProducts-title-total {
+    width: 200px;
+}
+
+.cartProducts-title-operation {
+    width: 150px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.ml30 {
+    margin-left: 30px;
+    height: 74px;
+}
+
+.cartProducts-listItem .item-pic img {
+    width: 72px;
+    height: 72px;
+}
+
+.cartProducts-listItem .item-msg {
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 321px;
+    color: #808080;
+    font-size: 14px;
+}
+
+.cartProducts-listItem .item-msg a {
+    color: #39f;
+}
+
+.cartProducts-listItem .item-price {
+    padding-top: 26px;
+    width: 143px;
+    color: #808080;
+    font-size: 14px;
+}
+
+.cartProducts-listItem .item-quantity {
+    padding-top: 22px;
+    width: 280px;
+}
+
+.countNumber {
+    padding: 0 24px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cartProducts-listItem .item-total {
+    padding-top: 26px;
+    width: 200px;
+    color: #db3852;
+}
+
+.cartProducts-listItem .item-operation {
+    padding-top: 28px;
+    width: 150px;
+}
+
+.cartProducts-listItem {
+    background: #F5F5F5;
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mt10 {
+    margin-top: 10px;
 }
 
 
