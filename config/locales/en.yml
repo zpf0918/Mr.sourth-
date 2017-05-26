@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+
+  previous-label: <span class="fa fa-angle-left"></span>
+  next-label: <span class="fa fa-angle-right"></span>
