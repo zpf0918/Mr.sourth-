@@ -9,18 +9,22 @@ class ProductsController < ApplicationController
   end
 
   def index
-    #@products = Product.all.order("position ASC")
     if params[:category].blank?
-      @products = Product.all
+      @products = Product.published.order("position ASC").recent.paginate(:page => params[:page], :per_page => 12)
     else
       @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(:category_id => @category_id)
+      @products = Product.where(:category_id => @category_id).published.recent.paginate(:page => params[:page], :per_page => 12)
     end
   end
 
   def show
     @product = Product.find(params[:id])
     @photos = @product.photos.all
+
+    if @product.is_hidden
+      flash[:warning] = "此商品已下架"
+      redirect_to products_path
+    end
   end
 
 
@@ -48,6 +52,8 @@ class ProductsController < ApplicationController
     flash[:warning] = "您已取消收藏宝贝"
 		redirect_to :back
 	end
+
+
 
 
 protected

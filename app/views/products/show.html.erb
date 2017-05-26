@@ -2,7 +2,8 @@
   <div class="intro clearfix">
           <div class="cover fl">
 
-            <!-- 商品小图 --->
+
+            <!-- 商品小图 -->
               <div class="intro-bigPic border pr">
                 <div class="magnifier-preview border" id="preview"></div>
                 <% if @photos.present? %>
@@ -12,7 +13,7 @@
                         src="<%= @photos.first.avatar.medium.url %>"
                         data-large-img-wrapper="preview"
                         data-large-img-url="<%= @photos.first.avatar.medium.url %>">
-                    </a>
+                    
                 <% end %>
               </div>
               <!-- 商品大图 -->
@@ -33,6 +34,7 @@
               <% end %>
              <% end %>>
            </ul>
+           
 
              <!--     收藏功能         -->
              <p class="mt20">
