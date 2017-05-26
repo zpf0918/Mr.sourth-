@@ -396,7 +396,16 @@ html { height: 100%;}
 
 .intro-bigPic {
     width: 420px;
-    // height: 420px;
+    height: 420px;
+}
+
+.intro-bigPic img {
+    width: 100%;
+}
+
+.intro-preview {
+    margin-top: 15px;
+    padding-left: 0px;
 }
 
 .border {
@@ -531,6 +540,11 @@ html { height: 100%;}
     height: 70px;
 }
 
+.intro-preview .intro-preview-item {
+    padding: 1px;
+    margin-right: 13px;
+    overflow: hidden;
+}
 
 
   /*----------------------登录与注册页面-------------------*/

@@ -28,7 +28,8 @@ class Admin::ProductsController < ApplicationController
         params[:photos]['avatar'].each do |a|
           @photo = @product.photos.create(:avatar => a)
         end
-      end
+
+    end
       redirect_to admin_products_path
     else
       render :new
@@ -50,10 +51,11 @@ class Admin::ProductsController < ApplicationController
         @picture = @product.photos.create(:avatar => a)
       end
 
-      @product.update(product_params)
-      redirect_to admin_products_path
 
-    elsif @product.update(product_params)
+      # @product.update(product_params)
+      # redirect_to admin_products_path 感觉多了暂时删掉
+
+     @product.update(product_params)
       redirect_to admin_products_path
     else
       render :edit

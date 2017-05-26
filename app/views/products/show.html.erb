@@ -2,7 +2,7 @@
   <div class="intro clearfix">
           <div class="cover fl">
 
-            <!-- 商品大图 --->
+            <!-- 商品小图 --->
               <div class="intro-bigPic border pr">
                 <div class="magnifier-preview border" id="preview"></div>
                 <% if @photos.present? %>
@@ -15,7 +15,7 @@
                     </a>
                 <% end %>
               </div>
-
+              <!-- 商品大图 -->
             <ul class="intro-preview clearfix">
               <% if @photos.present? %>
                <% @photos.each_with_index do |p, index| %>
