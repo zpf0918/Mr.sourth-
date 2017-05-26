@@ -18,6 +18,16 @@
                  <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
              <% end %>>
            </div>
+           <!-- 限时秒杀-->
+           限时秒杀！ <div id="getting-started"></div>
+           <script type="text/javascript">
+             $("#getting-started")
+             .countdown("<%= Time.zone.now + 1.days %>", function(event) {
+               $(this).text(
+                 event.strftime('%D days %H:%M:%S')
+               );
+             });
+           </script>
 
              <!--     收藏功能         -->
              <p class="mt20">
