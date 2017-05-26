@@ -31,7 +31,7 @@
           <div class="col-xs-6 col-md-3 product-content">
             <%= link_to product_path(product) do %>
               <% if product.image.present? %>
-                <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+                <%= image_tag(product.image.thumb.url, class: "thumbnail wow pulse", data: {wow_delay: "2s" }) %>
               <% else %>
                 <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
               <% end %>

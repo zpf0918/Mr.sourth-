@@ -16,7 +16,8 @@
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
 //= require autosize.min
-//= require jquery.countdown.min 
+//= require jquery.countdown.min
+//= require wow.min
 //= require_tree .
 
 
@@ -27,3 +28,8 @@ $(document).ready(function() {
     $('#myCarousel').carousel({interval: 4000})
     $(window).trigger('scroll') // 一开始就触发一下滚动事件
 });
+
+//WoW动图效果
+$(document).ready(function(){
+  new WOW().init();
+})
