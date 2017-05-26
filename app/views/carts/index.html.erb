@@ -11,7 +11,7 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th colspan="2">商品资讯</th>
+            <th>商品资讯</th>
             <th>单价</th>
             <th>数量</th>
             <th>管理选项</th>
@@ -29,9 +29,6 @@
                     <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
                   <% end %>
                 <% end %>
-              </td>
-              <td>
-                <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
               </td>
               <td>
                 <%= cart_item.product.price %>
