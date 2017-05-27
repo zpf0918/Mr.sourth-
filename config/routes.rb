@@ -49,7 +49,12 @@ end
     end
   end
 
-  resources :cart_items
+  resources :cart_items do
+    member do
+      post :add_quantity
+      post :remove_quantity
+    end
+  end
   resources :favorites
 
   resources :orders do
