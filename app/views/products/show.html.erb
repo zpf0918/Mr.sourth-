@@ -54,9 +54,9 @@
           <span class="pl20 pr30">库存</span><%= @product.quantity %><span></span>
         </p>
 
-
+    
      <!--     收藏功能         -->
-     <p class="mt20">
+     <p class="mt50">
        <% if user_signed_in? %>
          <% if !current_user.is_favorite_of?(@product) %>
             <%= link_to favorite_product_path(@product), :class => "like btn btn-default", method: :post do %>
@@ -84,6 +84,23 @@
       <a class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red">已售完</a>
     <% end %>
     </p>
+    <br><br><br><br><br><br><br><br><br>
+
+    <!--评论功能-->
+    <div class="row review">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h3 class="reviews_title">
+          <%= @product.reviews.count %> 条评论
+        </h3>
+        <hr>
+        <div id="reivews">
+          <%= render @product.reviews%>
+          <hr>
+          <%= render "reviews/form"%>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 

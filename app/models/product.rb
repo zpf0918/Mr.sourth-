@@ -28,6 +28,7 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :photos
 
   belongs_to :category
+  has_many :reviews
 
   # Scope #
   scope :recent, -> { order('created_at DESC') }
