@@ -1,4 +1,4 @@
-<div class="w1200 clearfix bc mt30 pb20">
+<div class="w1200 cartpage clearfix bc mt30 pb20">
   <div class="logo fl"><%=link_to("南山瓷艺", products_path, class: "col-black")%></div>
   <div><%= link_to("清空购物车", clean_carts_path,
                method: :delete, class: "pull-right cart_delete",
@@ -6,7 +6,7 @@
 
 </div>
 
-<div class="w1200 clearfix bc mt20">
+<div class="w1200 cartpage clearfix bc mt20">
   <ul class="cartProducts-title clearfix navbar-inverse border">
     <li class="tc fl cartProducts-title-msg">商品信息</li>
     <li class="tc fl cartProducts-title-price">单价</li>
@@ -19,17 +19,3 @@
     <%= render :partial => "product_list" %>
   </div>
 </div>
-
-      <!-- <thead>
-        <tr>
-          <th colspan="2">商品资讯</th>
-          <th>单价</th>
-          <th>数量</th>
-          <th>管理选项</th>
-        </tr>
-      </thead>
-      <tbody>
-
-
-  </div>
-</div> -->
