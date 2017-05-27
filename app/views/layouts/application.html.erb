@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jdstore Game</title>
+    <title>南山瓷艺</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
 <body>
   <div class="content">
@@ -13,7 +14,7 @@
      <div class="row">
       <%= render "common/navbar" %>
      </div>
-     <%= render "common/flashes" %>
+     <%= render "common/flashes"%>
      <%= yield %>
     </div>
  </div>

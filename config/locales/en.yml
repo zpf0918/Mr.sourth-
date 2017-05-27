@@ -21,3 +21,19 @@
 
 en:
   hello: "Hello world"
+
+  previous-label: <span class="fa fa-angle-left"></span>
+  next-label: <span class="fa fa-angle-right"></span>
+
+  #------Devise 内容 ----------- #
+  devise:
+    failure:
+      unauthenticated: 请先注册或者登陆南山瓷艺账户，才可进行操作哦。
+      not_found_in_database: 此帐号不存在。
+      invalid: 帐号或密码输入错误。
+    sessions:
+      signed_in: 登陆成功，欢迎来到南山瓷艺！
+      signed_out: 登出成功，记得回来哦。
+
+  dv-warn-email: 请输入您的邮箱账号。
+  dv-warn-pwd: 密码不相符，请再次确认。
