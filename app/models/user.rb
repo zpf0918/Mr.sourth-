@@ -26,7 +26,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :image, ImageUploader
-  
+
   def admin?
     is_admin
   end
@@ -39,6 +39,7 @@ class User < ApplicationRecord
   end
 
   has_many :orders
+  has_many :reviews
 
   def display_name
     if self.username.present?

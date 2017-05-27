@@ -39,6 +39,7 @@ end
       post :favorite
       post :unfavorite
     end
+    resources :reviews
   end
 
   resources :carts do
