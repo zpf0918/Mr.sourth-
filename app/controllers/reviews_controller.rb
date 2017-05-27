@@ -6,9 +6,9 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-  redirect_to product_path(@product), notice: 'Review was successfully created.'
+  redirect_to product_path(@product), notice: '评论发表成功.'
 else
-  redirect_to product_path(@product), notice: 'You have to write some words.'
+  redirect_to product_path(@product), warning: '快来吐槽吧.'
 end
   end
 
@@ -16,7 +16,7 @@ end
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to product_path(@product), alert: "You have deleted the review successfully"
+    redirect_to product_path(@product), alert: "删除评论成功"
   end
 
   private
