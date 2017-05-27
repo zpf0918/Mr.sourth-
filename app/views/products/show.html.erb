@@ -1,45 +1,62 @@
 
 <div class="show-page detail mt20 w1200 bc pb50">
   <div class="intro clearfix">
-    <div class="cover fl">
 
+          <div class="cover fl">
 
-      <!-- 商品小图 -->
-        <div class="intro-bigPic border pr">
-          <div class="magnifier-preview border" id="preview"></div>
-          <% if @photos.present? %>
-              <!-- <a class="magnifier-thumb-wrapper" href="javascript:;"> -->
-                <img
-                  id="thumb"
-                  src="<%= @photos.first.avatar.medium.url %>"
-                  data-large-img-wrapper="preview"
-                  data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+            <!-- 商品小图 --->
+              <div class="intro-bigPic border pr">
+                <div class="magnifier-preview border" id="preview"></div>
+                <% if @photos.present? %>
+                    <!-- <a class="magnifier-thumb-wrapper" href="javascript:;"> -->
+                      <img
+                        id="thumb"
+                        src="<%= @photos.first.avatar.medium.url %>"
+                        data-large-img-wrapper="preview"
+                        data-large-img-url="<%= @photos.first.avatar.medium.url %>">
 
-          <% end %>
+                <% end %>
+              </div>
+              <!-- 商品大图 -->
+            <ul class="intro-preview clearfix">
+              <% if @photos.present? %>
+               <% @photos.each_with_index do |p, index| %>
+                 <% if index == 0 %>
+                    <li class="border intro-preview-item intro-preview-activeItem fl">
+
+                 <% else %>
+                    <li class="border intro-preview-item fl">
+                 <% end %>
+
+                 <% if index < 5 %>
+                   <%= image_tag p.avatar.thumb.url %>
+              <% end %>
+                   </li>
+              <% end %>
+             <% end %>>
+           </ul>
+
+             <!--     收藏功能         -->
+             <p class="mt20">
+               <% if user_signed_in? %>
+                 <% if !current_user.is_favorite_of?(@product) %>
+                    <%= link_to favorite_product_path(@product), :class => "like btn btn-default", method: :post do %>
+                     <i class="fa  fa-star-o fa-lg"></i>
+                    <% end %>
+                 <% else %>
+                    <%= link_to unfavorite_product_path(@product), :class => "unlike btn btn-default", method: :post do %>
+                     <i class="fa fa-star fa-lg"></i>
+                   <% end %>
+                 <% end %>
+              <% else %>
+               <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
+                 <i class="fa fa-heart fa-lg"></i>
+               <% end %>
+              <% end %>
+            </p>
+             <!-- end -->
         </div>
 
-
-
-          <!-- 商品大图 -->
-        <ul class="intro-preview clearfix">
-          <% if @photos.present? %>
-           <% @photos.each_with_index do |p, index| %>
-             <% if index == 0 %>
-                <li class="border intro-preview-item intro-preview-activeItem fl">
-
-             <% else %>
-                <li class="border intro-preview-item fl">
-             <% end %>
-
-             <% if index < 5 %>
-               <%= image_tag p.avatar.thumb.url %>
-          <% end %>
-               </li>
-          <% end %>
-         <% end %>>
-       </ul>
-
-    </div>
 
     <div class="intro-text fr">
         <h3 class="f20 ell fb"> <%= @product.title %> </h3>
@@ -54,26 +71,7 @@
           <span class="pl20 pr30">库存</span><%= @product.quantity %><span></span>
         </p>
 
-    
-     <!--     收藏功能         -->
-     <p class="mt50">
-       <% if user_signed_in? %>
-         <% if !current_user.is_favorite_of?(@product) %>
-            <%= link_to favorite_product_path(@product), :class => "like btn btn-default", method: :post do %>
-             <i class="fa  fa-star-o fa-lg"></i>
-            <% end %>
-         <% else %>
-            <%= link_to unfavorite_product_path(@product), :class => "unlike btn btn-default", method: :post do %>
-             <i class="fa fa-star fa-lg"></i>
-           <% end %>
-         <% end %>
-      <% else %>
-       <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
-         <i class="fa fa-heart fa-lg"></i>
-       <% end %>
-      <% end %>
-    </p>
-     <!-- end -->
+
 
     <p class="intro-text-btnWrap">
       <% if @product.quantity.present? && @product.quantity > 0 %>
@@ -102,9 +100,6 @@
     </div>
 
   </div>
-
-
-
 
     </div>
 </div>
