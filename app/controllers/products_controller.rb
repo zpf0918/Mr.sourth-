@@ -9,18 +9,31 @@ class ProductsController < ApplicationController
   end
 
   def index
-    #@products = Product.all.order("position ASC")
-    if params[:category].blank?
-      @products = Product.all
-    else
+    # 分类功能
+    if params[:category].present?
       @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(:category_id => @category_id)
+      @products = Product.where(category_id: @category_id).order("position ASC").published.paginate(:page => params[:page], :per_page => 12)
+     # 排序功能
+    else
+      @products = case params[:order]
+        when 'by_product_price'
+          Product.published.order('price DESC').paginate(:page => params[:page], :per_page => 12)
+        when 'by_fans'
+          Product.published.all.order("position ASC").paginate(:page => params[:page], :per_page => 12)
+        else
+          Product.published.recent.paginate(:page => params[:page], :per_page => 12)
+        end
     end
   end
 
   def show
     @product = Product.find(params[:id])
     @photos = @product.photos.all
+
+    if @product.is_hidden
+      flash[:warning] = "此商品已下架"
+      redirect_to products_path
+    end
   end
 
 
@@ -48,6 +61,8 @@ class ProductsController < ApplicationController
     flash[:warning] = "您已取消收藏宝贝"
 		redirect_to :back
 	end
+
+
 
 
 protected

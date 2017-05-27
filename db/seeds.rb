@@ -41,41 +41,185 @@ else
   puts "Admin 已经建立过了，脚本跳过该步骤。"
 end
 
+# 执行seed后记得要去添加分类哦，不然有时会报错
+Product.create!(
+   id: 1,
+   title: "斗笠杯",
+   description: "斗笠杯",
+   category_id: 1,
+   price: 300,
+   quantity: 10,
+   image: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv51vo3wkj30m80m8gyw.jpg")
+)
+Photo.create!(product_id:1,avatar: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv51vo3wkj30m80m8gyw.jpg"))
 
 
-# Initialize Product(初始化商品)
+Product.create!(
+    id: 2,
+    title: "青瓷斗笠杯",
+    category_id: 1,
+    description: "斗笠杯",
+    price: 350,
+    quantity: 10,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv56pzs1rj30m80m8tfo.jpg")
+)
+Photo.create!(product_id:2,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv56pzs1rj30m80m8tfo.jpg"))
 
-# Product.create!(title: "青瓷碗",
-#    description: "青瓷碗",
-#    price: 1000,
-#    quantity: 20,
-#    image: open("http://img11.shop-pro.jp/PA01290/357/product/81667617_o1.jpg?20141007132916")
-#    )
-#
-#  Product.create!(title: "青如玉",
-#    description: "龙泉青瓷",
-#    price: 5000,
-#    quantity: 10,
-#    image: open("http://www.hschinese.com/sites/default/files/attached/image/201530/20150723103343_30143.jpg")
-#    )
+Product.create!(
+    id: 3,
+    title: "功夫茶具",
+    category_id: 1,
+    description: "功夫茶具，配件",
+    price: 150,
+    quantity: 20,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv594l0b4j30m80m8139.jpg")
+)
+Photo.create!(product_id:3,avatar: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv594l0b4j30m80m8139.jpg"))
 
-Product.create!(title: "QC-35",
-   description: "耳机",
-   price: 2800,
-   quantity: 5,
-   image: open("https://images-cn.ssl-images-amazon.com/images/I/41bVSMLUllL._AC_UL320_SR320,320_.jpg")
-   )
+Product.create!(
+    id: 4,
+    title: "花瓣杯",
+    category_id: 1,
+    description: "花瓣杯",
+    price: 200,
+    quantity: 10,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv5ws3edsj30m80m8gol.jpg")
+)
+Photo.create!(product_id:4,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv5ws3edsj30m80m8gol.jpg"))
 
- Product.create!(title: "Iphone7",
-   description: "手机",
-   price: 5000,
-   quantity: 5,
-   image: open("https://images-cn.ssl-images-amazon.com/images/I/51q3gdJGenL._SL800_.jpg")
-   )
 
- Product.create!(title: "Cherry Keyboard",
-   description: "G80-3000键盘",
-   price: 2800,
-   quantity: 5,
-   image: open("https://images-cn.ssl-images-amazon.com/images/I/41LN-bXtA7L._AC_UL320_SR320,320_.jpg")
-   )
+Product.create!(
+    id: 5,
+    title: "口福杯",
+    category_id: 1,
+    description: "口福杯",
+    price: 100,
+    quantity: 50,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv5yaawflj30m80m84ax.jpg")
+)
+Photo.create!(product_id:5,avatar: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv5yaawflj30m80m84ax.jpg"))
+
+Product.create!(
+    id: 6,
+    title: "斗笠杯-汤水",
+    category_id: 1,
+    description: "斗笠杯-汤水",
+    price: 400,
+    quantity: 10,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv60wew78j30m80m8ar8.jpg")
+)
+Photo.create!(product_id:6,avatar: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv60wew78j30m80m8ar8.jpg"))
+
+
+Product.create!(
+    id: 11,
+    title: "汝壶",
+    category_id: 1,
+    description: "汝瓷开片石瓢壶冰裂功夫茶具",
+    price: 600,
+    quantity: 30,
+    image: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv62ec6cvj30m80m8k07.jpg")
+)
+Photo.create!(product_id:11,avatar: open("https://ws2.sinaimg.cn/large/006tNc79gy1ffv62ec6cvj30m80m8k07.jpg"))
+
+
+Product.create!(
+    id: 8,
+    title: "青瓷葫芦",
+    category_id: 1,
+    description: "青瓷葫芦",
+    price: 800,
+    quantity: 5,
+    image: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv646jib1j30m80m87cy.jpg")
+)
+Photo.create!(product_id:8,avatar: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv646jib1j30m80m87cy.jpg"))
+
+
+Product.create!(
+    id: 9,
+    title: "七泉瓶",
+    category_id: 1,
+    description: "七泉瓶",
+    price: 600,
+    quantity: 30,
+    image: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv66gsz72j30m80m8qb9.jpg")
+)
+Photo.create!(product_id:9,avatar: open("https://ws3.sinaimg.cn/large/006tNc79gy1ffv66gsz72j30m80m8qb9.jpg"))
+
+
+
+Product.create!(
+    id: 10,
+    title: "影青瓷",
+    category_id: 1,
+    description: "影青瓷三才盖碗",
+    price: 800,
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv69rznwdj30m80m8qaf.jpg")
+)
+Photo.create!(product_id:10,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv69rznwdj30m80m8qaf.jpg"))
+
+
+
+
+
+Product.create!(
+    id: 12,
+    title: "茶台",
+    category_id: 1,
+    description: "茶台",
+    price: 50,
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tKfTcgy1ffvivsrhmzj30m80m8jzf.jpg")
+)
+Photo.create!(product_id:12,avatar: open("https://ws1.sinaimg.cn/large/006tKfTcgy1ffvivsrhmzj30m80m8jzf.jpg"))
+
+
+Product.create!(
+    id: 13,
+    title: "茶盘",
+    category_id: 1,
+    description: "重竹制茶盘",
+    price: 50,
+    quantity: 20,
+    image: open("https://ws3.sinaimg.cn/large/006tKfTcgy1ffvixhuwptj30m80m8wkh.jpg")
+)
+Photo.create!(product_id:13,avatar: open("https://ws3.sinaimg.cn/large/006tKfTcgy1ffvixhuwptj30m80m8wkh.jpg"))
+
+
+
+
+Product.create!(
+    id: 14,
+    title: "武夷肉桂",
+    category_id: 2,
+    description: "武夷肉桂",
+    price: 100,
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6eh74lxj30ly0qoq7e.jpg")
+)
+Photo.create!(product_id:14,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6eh74lxj30ly0qoq7e.jpg"))
+
+
+Product.create!(
+    id: 15,
+    title: "日月潭红茶",
+    category_id: 2,
+    description: "日月潭红茶",
+    price: 150,
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6g5516ej30ly0qo0vv.jpg")
+)
+Photo.create!(product_id:15,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6g5516ej30ly0qo0vv.jpg"))
+
+
+Product.create!(
+    id: 16,
+    title: "白牡丹",
+    category_id: 2,
+    description: "白牡丹",
+    price: 50,
+    quantity: 20,
+    image: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg")
+)
+Photo.create!(product_id:16,avatar: open("https://ws1.sinaimg.cn/large/006tNc79gy1ffv6e3jrjgj30ly0qogqd.jpg"))

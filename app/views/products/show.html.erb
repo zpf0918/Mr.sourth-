@@ -1,5 +1,7 @@
+
 <div class="show-page detail mt20 w1200 bc pb50">
   <div class="intro clearfix">
+
           <div class="cover fl">
 
             <!-- 商品小图 --->
@@ -12,7 +14,7 @@
                         src="<%= @photos.first.avatar.medium.url %>"
                         data-large-img-wrapper="preview"
                         data-large-img-url="<%= @photos.first.avatar.medium.url %>">
-                    
+
                 <% end %>
               </div>
               <!-- 商品大图 -->
@@ -55,35 +57,31 @@
              <!-- end -->
         </div>
 
-            <!-- 商品明细 --->
 
-          <div class="intro-text fr">
-              <h3 class="f20 ell fb"> <%= @product.title %> </h3>
+    <div class="intro-text fr">
+        <h3 class="f20 ell fb"> <%= @product.title %> </h3>
+        <p class="intro-text-desc"><%= @product.description %></p>
+        <p class="intro-text-value bg-gray">
+          <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
+        </p>
+        <p class="intro-text-service">
+          <span class="pl20 pr30">运费</span><span>满199元包邮</span>
+        </p>
+        <p class="intro-text-count">
+          <span class="pl20 pr30">库存</span><%= @product.quantity %><span></span>
+        </p>
 
-              <p class="intro-text-desc"><%= @product.description %></p>
 
-              <p class="intro-text-value bg-gray">
-                <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
-              </p>
-
-              <p class="intro-text-service">
-                <span class="pl20 pr30">运费</span><span>满199元包邮</span>
-              </p>
-
-              <p class="intro-text-count">
-                <span class="pl20 pr30">库存</span><%= @product.quantity %><span></span>
-              </p>
-
-              <p class="intro-text-btnWrap">
-                <% if @product.quantity.present? && @product.quantity > 0 %>
-                  <%= link_to("加入购物车", add_to_cart_product_path(@product),
-                      :method => :post,
-                      :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red") %>
-              <% else %>
-                <a class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red">已售完</a>
-              <% end %>
-              </p>
-            </div>
-
-      </div>
+    <p class="intro-text-btnWrap">
+      <% if @product.quantity.present? && @product.quantity > 0 %>
+        <%= link_to("加入购物车", add_to_cart_product_path(@product),
+            :method => :post,
+            :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red") %>
+    <% else %>
+      <a class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red">已售完</a>
+    <% end %>
+    </p>
   </div>
+
+    </div>
+</div>

@@ -10,16 +10,16 @@
   <div class="form-inputs">
 
     <div style="margin-bottom: 25px" class="input-group">
-      <span class="input-group-addon">注册邮箱</span>
-      <%= f.input :email, :label => false, placeholder:'邮箱地址',required: true, autofocus: true %>
+      <span class="input-group-addon ">注册邮箱</span>
+      <%= f.input :email, :label => false, :error => false,  placeholder:'邮箱地址',required: true, autofocus: true %>
     </div>
     <div style="margin-bottom: 25px" class="input-group">
       <span class="input-group-addon">设置密码</span>
-      <%= f.input :password, :label => false, placeholder: '密码,至少为8位数字英文组合', required: true %>
+      <%= f.input :password, :label => false, :error => false, placeholder: '密码,至少为8位数字英文组合', required: true %>
     </div>
     <div style="margin-bottom: 25px" class="input-group">
       <span class="input-group-addon">确定密码</span>
-      <%= f.input :password_confirmation, :label => false, placeholder: '请再次输入密码', required: true %>
+      <%= f.input :password_confirmation, :label => false, :error => false, placeholder: '请再次输入密码', required: true %>
     </div>
   </div>
 
