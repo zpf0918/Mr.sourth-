@@ -735,6 +735,10 @@ img {
         position: relative;
       }
 
+      a{
+        color: rgba(66,36,27,1);
+      }
+
       .account{
         text-align: left;
       }
@@ -762,6 +766,10 @@ img {
             color: #fff;
         }
       }
+  }
+
+  .glyphicon{
+    color: rgba(66,36,27,1);
   }
 
 .input-group-addon{
