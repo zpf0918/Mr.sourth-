@@ -1,5 +1,7 @@
 class Account::UsersController < ApplicationController
   before_action :authenticate_user!
+  layout 'usercenter'
+
 
   def edit
     @user = current_user
