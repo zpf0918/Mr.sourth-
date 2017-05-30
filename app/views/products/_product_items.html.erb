@@ -1,18 +1,7 @@
 
-<div class="box panel panel-default">
-  <!-- <% if @photos.present? %>
-   <% @photos.each_with_index do |p, index| %>
-     <% if index == 0 %>
-       <%= image_tag p.avatar.medium.url %>
-       <div style="letter-spacing: -8px">
-     <% else %>
-       <%= image_tag p.avatar.thumb.url %>
-     <% end %>
-   <% end %>
-   </div>
- <% else %>
-     <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
- <% end %>> -->
+<div class="box panel product-search p15 fl panel-default">
+  <p class="productList-item-pic w200 h200">
+
  <%= link_to product_path(product) do %>
    <% if product.image.present? %>
      <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -20,20 +9,27 @@
      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
    <% end %>
  <% end %>
-  <div class="fig" >
-    <p class="actions">
-      <% if product.quantity.present? && product.quantity > 0 %>
-        <%= link_to add_to_cart_product_path(product), class: "add-to-cart", :remote => true, :method => :post do %>
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        <% end %>
-      <% else %>
-        已销售一空，无法购买
+ </p>
+
+<!---先隐藏购物车按钮---->
+<!-- <div class="fig" >
+  <p class="actions">
+    <% if product.quantity.present? && product.quantity > 0 %>
+      <%= link_to add_to_cart_product_path(product), class: "add-to-cart", :remote => true, :method => :post do %>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
       <% end %>
-    </p>
-  </div>
+    <% else %>
+      已销售一空，无法购买
+    <% end %> -->
+  <!---end---->
+
   <div class="panel-body" style="padding:5px;">
-    <p >
-      <span  class="price pull-left" >￥ <%= product.price %> </span>
+
+      <p class="productList-item-price fb col-red f18 mt10">￥<%= product.price %>
+        <p class="productList-item-name ell">
+    <%= link_to product_path(product) do %>
+       <%= product.title %>
+    <% end %>
       <span class="pull-right">
         <% if user_signed_in? %>
           <% if !current_user.is_favorite_of?(product) %>
@@ -51,6 +47,6 @@
           <% end %>
         <% end %>
       </span>
-    </p>
+
   </div>
 </div>
