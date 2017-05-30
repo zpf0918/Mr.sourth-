@@ -539,7 +539,7 @@ img {
     margin-left: 20px;
 }
 
-.show-page {
+.show-page, .search-page {
     width: 1200px;
 }
 
@@ -699,6 +699,61 @@ img {
 .checkout-submit {
   margin-right: 15px;
   margin-bottom: 15px;
+}
+
+  /*----------------------搜索结果页面------------------*/
+
+  .search-count {
+    text-align: center;
+  }
+
+  .pt30 {
+    padding-top: 30px;
+  }
+
+  .minHeight1000 {
+      min-height: 1000px;
+  }
+
+  .product-search {
+    width: 230px;
+    height: 350px;
+    background: #fff;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.09);
+    top: 0;
+    transition: all .4s;
+  }
+
+  .p15 {
+    padding: 15px;
+}
+
+.fl {
+    float: left;
+    display: inline;
+}
+
+.col-red {
+    color: #d32048;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+
+.fb {
+    font-weight: bold;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.thumbnail {
+  padding: 0px;
 }
 
   /*----------------------登录与注册页面-------------------*/
@@ -928,5 +983,5 @@ img {
     border-top-left-radius: 3px;
 }
 .panel{
-  height: 800px;
+  // height: 800px;
 }

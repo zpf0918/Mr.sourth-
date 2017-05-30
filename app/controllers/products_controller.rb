@@ -71,7 +71,6 @@ protected
     @query_string = params[:q].gsub(/\\|\'|\/|\?/, "")if params[:q].present?
   end
 
-private
 
   def search_params
     Product.ransack({:title_or_description_cont => @query_string}).result(distinct: true)
