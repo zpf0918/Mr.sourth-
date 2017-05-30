@@ -15,6 +15,8 @@
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
             <%= f.input :password, :label => false, placeholder:'密码', required: false %>
           </div>
+          <%= rucaptcha_image_tag(alt: 'Captcha') %>
+          <%= rucaptcha_input_tag(class: 'form-control', placeholder: '请输入验证码') %>
           <%= f.input :remember_me, :label => "记住我",as: :boolean if devise_mapping.rememberable? %>
           <%= link_to "忘记密码？", new_password_path(resource_name), class: 'psw'%>
         </div>

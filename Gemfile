@@ -55,6 +55,10 @@ gem 'figaro'
 #理清model关系的gem
 gem 'rails-erd'
 
+#验证码
+gem 'rucaptcha'
+gem 'dalli'
+
 # gem 'jquery-turbolinks'
 
 group :development, :test do

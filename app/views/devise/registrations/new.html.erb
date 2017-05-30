@@ -21,6 +21,8 @@
       <span class="input-group-addon">确定密码</span>
       <%= f.input :password_confirmation, :label => false, :error => false, placeholder: '请再次输入密码', required: true %>
     </div>
+    <%= rucaptcha_image_tag(alt: 'Captcha') %>
+    <%= rucaptcha_input_tag(class: 'form-control', placeholder: '请输入验证码') %>
   </div>
 
 
