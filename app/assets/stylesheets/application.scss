@@ -121,7 +121,87 @@ section h2 {
   padding-bottom: 15px;
 }
 
+
+//----------- 品牌故事  ------------//
+
+.box-c {
+    height: 600px;
+    margin-bottom: 100px;
+}
+
+.box-c {
+    background-size: cover;
+    background-color: white;
+    width: 100%;
+}
+
+.c-row1 {
+    width: 80%;
+    height: 300px;
+    background-color: grey;
+    margin: 0 auto;
+}
+
+.c1 {
+    width: 50%;
+    height: 300px;
+    float: left;
+    background-image: url(https://ws4.sinaimg.cn/large/006tNbRwgy1fg4phrtsjij31es0tc7wh.jpg);
+    background-size: cover;
+}
+
+.c2 {
+    width: 50%;
+    height: 300px;
+    background-color: #ebedef;
+    float: left;
+    background-image: url(https://ws4.sinaimg.cn/large/006tKfTcgy1fg4mk5lhuqj31kw0wzahb.jpg);
+    background-size: cover;
+}
+
+.c2-text {
+    text-align: center;
+    width: 180px;
+    float: left;
+    margin-left: 33%;
+}
+
+.c-row2 {
+    width: 80%;
+    height: 300px;
+    background-color: pink;
+    margin: 0 auto;
+}
+
+.c3 {
+    width: 50%;
+    height: 300px;
+    background-color: #ebedef;
+    float: left;
+    background-size: cover;
+}
+
+.c3-text {
+    text-align: center;
+}
+
+.c4 {
+    width: 50%;
+    height: 300px;
+    float: left;
+    background-image: url(https://ws4.sinaimg.cn/large/006tNbRwgy1fg4pdinli2j31cy0uehdu.jpg);
+    background-size: cover;
+}
+
+.contactus {
+  color: black;
+}
+
 //----------- 我们的优势 ------------//
+
+.advantage {
+  background: #E0E0E0;
+}
 
 .pb60 {
     padding-bottom: 60px;
@@ -197,7 +277,6 @@ img {
 //-------  大师风采 -------------//
 
 .lp-bg-gray {
-    background: #E0E0E0;
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 -1px 1px rgba(0,0,0,0.1);
 }
 
@@ -383,6 +462,10 @@ img {
     margin-right: 5px;
     height: 24px;
     line-height: 23px;
+  }
+
+  .footer-text {
+    color: #C2C2C2;
   }
 
 /*---------------------- products/show -------------------*/
@@ -758,6 +841,7 @@ img {
 .thumbnail {
   padding: 0px;
 }
+
 
   /*----------------------登录与注册页面-------------------*/
   .user_setup{
