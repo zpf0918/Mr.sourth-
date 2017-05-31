@@ -985,3 +985,21 @@ img {
 .panel{
   // height: 800px;
 }
+
+/*----------------购物车内“+”-”按钮-----------*/
+
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 2.5px;
+    outline: none;
+}
+.cart-quantity-box .cart-quantity-actions {
+    padding: 2.5px 10px 2.5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 2.5px;
+    color: gray;
+    background: #fff;
+}
