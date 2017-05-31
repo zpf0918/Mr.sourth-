@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:favorite, :unfavorite]
   before_action :validate_search_key, only: [:search]
-
+  impressionist :actions=>[:show]
   def search
     if @query_string.present?
       @products = search_params

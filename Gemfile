@@ -59,6 +59,9 @@ gem 'rails-erd'
 gem 'rucaptcha'
 gem 'dalli'
 
+#浏览量
+gem 'impressionist'
+
 # gem 'jquery-turbolinks'
 
 group :development, :test do

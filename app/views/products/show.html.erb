@@ -68,9 +68,11 @@
           <span class="pl20 pr30">运费</span><span>满199元包邮</span>
         </p>
         <p class="intro-text-count">
-          <span class="pl20 pr30">库存</span><%= @product.quantity %><span></span>
+          <span class="pl20 pr30">库存</span><span><%= @product.quantity %></span>
         </p>
-
+        <p class="intro-text-view">
+          <span class="pl20 pr30">浏览</span><span><%= @product.impressionist_count(:filter=>:session_hash)%></span>
+        </p>
 
 
     <p class="intro-text-btnWrap">
@@ -84,13 +86,15 @@
     </p>
     <br><br><br><br><br><br><br><br><br>
 
+
+
     <!--评论功能-->
     <div class="row review">
       <div class="col-sm-10 col-sm-offset-1">
         <h3 class="reviews_title">
           <%= @product.reviews.count %> 条评论
         </h3>
-        <hr>
+
         <div id="reivews">
           <%= render @product.reviews%>
           <hr>
