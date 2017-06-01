@@ -1,0 +1,15 @@
+<div class="col-md-10 col-md-offset-1 suggest-title">
+  <span>为  您  推  荐</span>
+</div>
+<!--=== 随机推荐5个商品 ===-->
+<% @suggests.each_with_index do |product, index| %>
+  <div class='col-xs-12 col-sm-4 col-md-8 suggested-product-content'>
+    <%= link_to product_path(product) do %>
+      <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, class: "thumbnail wow pulse", data: {wow_delay: "2s" }) %>
+      <% else %>
+        <%= image_tag('http://placehold.it/100x100&text=No Pic', class: 'thumbnail') %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
