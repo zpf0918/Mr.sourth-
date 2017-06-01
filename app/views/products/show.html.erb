@@ -55,12 +55,14 @@
               <% end %>
             </p>
              <!-- end -->
+
         </div>
 
 
-    <div class="intro-text fr">
+
+
+    <div class="intro-text fr col-md-6">
         <h3 class="f20 ell fb"> <%= @product.title %> </h3>
-        <p class="intro-text-desc"><%= @product.description %></p>
         <p class="intro-text-value bg-gray">
           <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
         </p>
@@ -84,26 +86,59 @@
       <a class="intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red">已售完</a>
     <% end %>
     </p>
-    <br><br><br><br><br><br><br><br><br>
-
-
-
-    <!--评论功能-->
-    <div class="row review">
-      <div class="col-sm-10 col-sm-offset-1">
-        <h3 class="reviews_title">
-          <%= @product.reviews.count %> 条评论
-        </h3>
-
-        <div id="reivews">
-          <%= render @product.reviews%>
-          <hr>
-          <%= render "reviews/form"%>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
     </div>
+ </div>
+
+   <div class="container">
+     <div  class="row">
+       <div class="product-wrap">
+         <div class="ald-skuRight">
+           <!-- 热门推荐 --->
+            <div class=''>
+              <%= render "shared/suggest" %>
+            </div>
+         </div>
+
+
+       <div class="product-info">
+         <!--评论功能-->
+         <div class="TabBarBox">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active ">
+                <a href="#tab-left" role="tab" data-toggle="tab">商品详情</a>
+              </li>
+              <li>
+                <a href="#tab-right" role="tab" data-toggle="tab">累计评价
+                  <%= @product.reviews.count %></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content">
+                  <div class="tab-pane active" id="tab-left">
+                    <div class="description">
+                      <p>
+                        <%= raw @product.description %>
+                      </p>
+                    </div>
+                  </div>
+
+           <div class="tab-pane" id="tab-right">
+             <div class="row review">
+               <div class="col-md-10 col-md-offset-1">
+               <div id="reivews">
+                 <%= render @product.reviews%>
+                 <hr>
+                 <%= render "reviews/form"%>
+               </div>
+              </div>
+             </div>
+           </div><!--评论结束-->
+         </div><!-- tab-content -->
+         </div><!-- product-info -->
+     </div><!-- product-wrap -->
+     </div><!-- row -->
+   </div><!-- container -->
+
 </div>

@@ -35,7 +35,7 @@ class Product < ApplicationRecord
   # Scope #
   scope :recent, -> { order('created_at DESC') }
   scope :published, -> { where(is_hidden: false)}
-
+  scope :random5, -> {limit(5).order("RANDOM()")}
 
   # 管理员上下架商品
   def publish!

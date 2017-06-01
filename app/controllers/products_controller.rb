@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def index
+
     # 分类功能
     if params[:category].present?
       @category_id = Category.find_by(name: params[:category]).id
@@ -29,6 +30,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @photos = @product.photos.all
+    @suggests = Product.published.random5 #随机推荐5个职位
 
     if @product.is_hidden
       flash[:warning] = "此商品已下架"

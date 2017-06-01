@@ -649,6 +649,163 @@ img {
   margin: 20px 0 20px;
 }
 
+.product-wrap {
+    margin-top: 30px;
+    width: 1170px;
+}
+
+.ald-skuRight {
+    width: 200px;
+    z-index: 0;
+    border: 1px solid #f2f2f2;
+    top: 0;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.suggest-title {
+    border: 1px solid #dfdfdf;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.suggest-title a, .nav-tabs a {
+  color: #333;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.product-hot .wrapCon {
+    height: 100%;
+}
+
+.wrapCon {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-hot .ald-carousel {
+    height: 980px;
+}
+
+.ald-carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 12px 2px 13px;
+}
+
+// .wrapCon ul {
+//     width: 100%;
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     position: absolute;
+// }
+
+// .wrapCon ul li {
+//     height: 174px;
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     display: block;
+// }
+
+.wrapCon .wow {
+    display: block;
+    text-align: center;
+    color: #62574e;
+    zoom: 1;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+}
+
+.thumbnail-1 {
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #f8f8f8;
+    vertical-align: middle;
+    line-height: 120px;
+    overflow: hidden;
+}
+
+.wrapCon .look_price {
+    width: 100%;
+    left: 0;
+    line-height: 20px;
+    background-color: rgba(255,255,255,0.8);
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 0;
+    color: #62574e;
+}
+
+.wrapCon .look_title a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    color: #62574e;
+    zoom: 1;
+    cursor: pointer;
+}
+
+.wrapCon .look_title {
+    margin-top: 0.2em;
+}
+
+.ALDCLS-act {
+  margin-bottom: 5px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+
+.product-info {
+    width: 940px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.TabBarBox {
+    border: 1px solid #dfdfdf;
+    margin-bottom: 30px;
+}
+
+.TabBarBox ul {
+    width: 100%;
+    position: relative;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: -8px;
+    border-bottom: 0;
+}
+
+.TabBarBox .active {
+    position: relative;
+    border-top: 2px solid #b00000;
+    height: 47px;
+    margin: -1px 0 0 -1px;
+    z-index: 1;
+    padding: 0;
+    float: left;
+    line-height: 48px;
+    display: block;
+    cursor: pointer;
+}
+
+
 /*---------------- 购物车首页 ----------------------*/
 
 .cartpage {
