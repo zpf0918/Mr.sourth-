@@ -108,9 +108,6 @@ ActiveRecord::Schema.define(version: 20170531083425) do
     t.integer  "position"
     t.integer  "category_id"
     t.boolean  "is_hidden",   default: false
-    t.string   "friendly_id"
-    t.integer  "discount"
-    t.index ["friendly_id"], name: "index_products_on_friendly_id", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|
