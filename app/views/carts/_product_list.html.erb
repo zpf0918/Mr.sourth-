@@ -17,7 +17,11 @@
           </div>
 
           <div class="item-price fl tc">
-            <%= cart_item.product.price %>
+            <% if cart_item.product.discount.present? %>
+            <td><%= cart_item.product.price * cart_item.product.discount / 100 %></td>
+          <% else %>
+            <td><%= cart_item.product.price %></td>
+          <% end %>
           </div>
 
           <div class="item-quantity fl tc">

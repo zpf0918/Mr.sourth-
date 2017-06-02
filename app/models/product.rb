@@ -20,6 +20,8 @@ class Product < ApplicationRecord
 
 
   validates :title, presence: true
+  #折扣
+  validates_numericality_of :discount, :greater_than => 0, :less_than => 100, :allow_blank => true
 
   # validates :image, presence: true
 

@@ -38,7 +38,12 @@
             <% end %>
             <div class="product-info">
               <p>  <%= link_to(product.title , product_path(product)) %></p>
-              <p>$ <%= product.price %></p>
+              <!--显示折扣价格-->
+              <% if product.discount.present? %>
+                ￥ <%= product.price = product.price * product.discount/100 %>
+              <% else %>
+                ￥ <%= product.price %>
+              <% end %>
             </div>
           </div>
         <% end %>

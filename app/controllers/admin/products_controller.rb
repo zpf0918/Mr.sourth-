@@ -99,11 +99,18 @@ class Admin::ProductsController < ApplicationController
     redirect_to :back
   end
 
+  def discount_price
+  @product = Product.find(params[:id])
+  if @product.discount.present?()
+    @product.price = @product.price * (@product.discount / 100 )
+  end
+end
+
 
  private
 
  def product_params
-   params.require(:product).permit(:title, :description, :price, :quantity, :image, :category_id, :is_hidden)
+   params.require(:product).permit(:title, :description, :price, :quantity, :image, :category_id, :is_hidden, :discount)
  end
 
 end

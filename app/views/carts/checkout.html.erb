@@ -20,9 +20,13 @@
               <td>
                 <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
               </td>
-              <td class="price-color">
-                <%= cart_item.product.price %>
-              </td>
+              <!-- 显示折后价-->
+                <% if cart_item.product.discount.present? %>
+                <td><%= cart_item.product.price * cart_item.product.discount / 100 %></td>
+              <% else %>
+                <td class="price-color"><%= cart_item.product.price %></td>
+              <% end %>
+
 
               <td>
                 <%= cart_item.quantity %>
