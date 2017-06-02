@@ -1000,6 +1000,16 @@ p {
 }
 
 
+/*------------ 后台管理 ---------------*/
+
+.category-btn {
+  margin-bottom: 10px;
+} //category/index
+
+.order-btn {
+  margin-bottom: 5px;
+}//product/index 上架／下架／向上／向下
+
   /*----------------------登录与注册页面-------------------*/
   .user_setup{
       height: 850px;
@@ -1217,6 +1227,7 @@ p {
 
 
 /*----------------个人中心页面------------------*/
+
 .nav-pills1{
   box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.3)
 }
@@ -1225,9 +1236,10 @@ p {
     border-bottom: 1px solid transparent;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
+    font-size: 2.5em;
 }
 .panel{
-  // height: 800px;
+  margin-top: 20px;
 }
 
 /*----------------购物车内“+”-”按钮-----------*/
