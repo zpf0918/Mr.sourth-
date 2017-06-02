@@ -72,11 +72,8 @@
         <!-- 如果有折扣 -->
       <% if @product.discount.present? && @product.quantity > 0 %>
            <p class="intro-text-value bg-gray">
-            <span class="pl20 pr30">售价</span><s><span class="price f24 fb col-red">￥<%= @product.price %></span></s>
+            <span class="pl20 pr30">售价</span><s><span class="price f24 fb col-red">￥<%= @product.price %></span></s> &nbsp &nbsp &nbsp <span class="price f24 fb col-red">￥<%= @product.price = @product.price * @product.discount/100 %></span>
           </p>
-          <p class="intro-text-value bg-gray">
-         <span class="pl20 pr30">促销</span><span class="price f24 fb col-red">￥<%= @product.price = @product.price * @product.discount/100 %></span>
-       </p>
      <% else %>
        <p class="intro-text-value bg-gray">
          <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
