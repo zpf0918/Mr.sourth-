@@ -83,7 +83,8 @@ $(window).scroll(function () {
   }
 })
 
-/*------------------商品详情页 + - 钮-------------*/
+
+/*------------------商品展示页 + - 钮---------------*/
 $(document).ready(function() {
   /*增加数量*/
   $("#quantity-plus").click(function(e) {

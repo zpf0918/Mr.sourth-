@@ -64,6 +64,22 @@ class ProductsController < ApplicationController
 		redirect_to :back
 	end
 
+  def add_buying_quantity
+  if @product.buying_quantity <= @product.quantity
+    @product.buying_quantity +=1
+    @product.save
+   redirect_to :back
+  end
+end
+
+def remove_buying_quantity
+  if @product.buying_quantity > 1
+    @product.buying_quantity -= 1
+    @product.save
+    redirect_to :back
+  end
+end
+
 
 
 
