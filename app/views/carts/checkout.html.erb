@@ -50,20 +50,20 @@
         <%= simple_form_for @order do |f| %>
 
         <legend> 订购人 </legend>
-        <div class="form-group col-lg-6">
-          <%= f.input :billing_name, :label => "购买人姓名" %>
+        <div class='form-group col-lg-6'>
+          <%= f.input :billing_username, placeholder: '請輸入訂購人姓名', input_html: {value: current_user.username}, :label => '姓名'  %>
         </div>
-        <div class="form-group col-lg-6">
-          <%= f.input :billing_address, :label => "购买人地址" %>
+        <div class='form-group col-lg-6'>
+           <%= f.input :billing_address, placeholder: '請輸入訂購人帳單地址', input_html: {value: current_user.address}, :label => '地址'  %>
         </div>
 
         <legend> 收货人 </legend>
-        <div class="form-group col-lg-6">
-          <%= f.input :shipping_name, :label => "收货人姓名" %>
-        </div>
-        <div class="form-group col-lg-6">
-          <%= f.input :shipping_address, :label => "收货人地址"  %>
-        </div>
+        <div class='form-group col-lg-6'>
+          <%= f.input :shipping_username, placeholder: '請輸入收貨人姓名', input_html: {value: current_user.username}, :label => '姓名'  %>
+      </div>
+      <div class='form-group col-lg-6'>
+          <%= f.input :shipping_address, placeholder: '請輸入收貨人收件地址', input_html: {value: current_user.address}, :label => '地址'  %>
+      </div>
 
         <div class="checkout">
           <%= f.submit "提交订单", class: "checkout-submit btn btn-lg btn-danger pull-right",
