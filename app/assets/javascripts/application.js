@@ -82,28 +82,3 @@ $(window).scroll(function () {
     $('#gotop').fadeOut() // 否则慢慢地隐藏「回到顶部按钮」
   }
 })
-
-
-/*------------------商品展示页 + - 钮---------------*/
-$(document).ready(function() {
-  /*增加数量*/
-  $("#quantity-plus").click(function(e) {
-    var num = parseInt($("#quantity-input").val()) + 1;
-    $("#quantity-minus").removeClass("disabled");
-    $("#quantity-input").val(num);
-    e.preventDefault();
-  });
-
-  /*减少数量*/
-  $("#quantity-minus").click(function(e) {
-    var num = parseInt($("#quantity-input").val());
-    if (num > 1) {
-      $("#quantity-input").val(num -= 1);
-      $("#quantity-plus").removeClass("disabled");
-    }
-    if (num <= 1) {
-      $("#quantity-minus").addClass("disabled");
-    }
-    e.preventDefault();
-  });
-});

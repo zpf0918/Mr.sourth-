@@ -83,13 +83,6 @@
         <p class="intro-text-view">
           <span class="pl20 pr30">浏览</span><span><%= @product.impressionist_count(:filter=>:session_hash)%></span>
         </p>
-        <p class="intro-text-quantity">
-            <span class="pl20 pr30">数量</span>
-           <%= link_to("-", "", id: "quantity-minus", class: "cart-quantity-actions disabled") %>
-             <input type="text" name="quantity" value="1" id="quantity-input" class="quantity-input">
-           <%= link_to("+", "", id: "quantity-plus", class: "cart-quantity-actions #{@product.quantity <= 1 ? 'disabled' : ''}") %>
-        </p>
-
     <p class="intro-text-btnWrap">
       <% if @product.quantity.present? && @product.quantity > 0 %>
         <%= link_to("加入购物车", add_to_cart_product_path(@product),
