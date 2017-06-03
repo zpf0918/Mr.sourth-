@@ -25,12 +25,14 @@ class Order < ApplicationRecord
   end
 
   belongs_to :user
-  has_many :product_lists
 
-  # validates :billing_name, presence: true
-  # validates :billing_address, presence: true
-  # validates :shipping_name, presence: true
-  # validates :shipping_address, presence: true
+
+  validates :billing_name, presence: true
+  validates :billing_address, presence: true
+  validates :shipping_name, presence: true
+  validates :shipping_address, presence: true
+
+  has_many :product_lists
 
   def set_payment_with!(method)
     self.update_columns(payment_method: method)

@@ -55,7 +55,7 @@
 
         <legend> 订购人 </legend>
         <div class='form-group col-lg-6'>
-          <%= f.input :billing_username, placeholder: '请输入订购人姓名', input_html: {value: current_user.username}, :label => '姓名'  %>
+          <%= f.input :billing_name, placeholder: '请输入订购人姓名', input_html: {value: current_user.username}, :label => '姓名'  %>
         </div>
         <div class='form-group col-lg-6'>
            <%= f.input :billing_address, placeholder: '请输入订购人地址', input_html: {value: current_user.address}, :label => '地址'  %>
@@ -63,7 +63,7 @@
 
         <legend> 收货人 </legend>
         <div class='form-group col-lg-6'>
-          <%= f.input :shipping_username, placeholder: '请输入收货人姓名', input_html: {value: current_user.username}, :label => '姓名'  %>
+          <%= f.input :shipping_name, placeholder: '请输入收货人姓名', input_html: {value: current_user.username}, :label => '姓名'  %>
       </div>
       <div class='form-group col-lg-6'>
           <%= f.input :shipping_address, placeholder: '请输入收货人地址', input_html: {value: current_user.address}, :label => '地址'  %>
