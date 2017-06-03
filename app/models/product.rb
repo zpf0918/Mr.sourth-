@@ -23,7 +23,7 @@ class Product < ApplicationRecord
   #折扣
   validates_numericality_of :discount, :greater_than => 0, :less_than => 100, :allow_blank => true
 
-   validates :image, presence: true
+  #  validates :image, presence: true
 
   has_many :favorites
   has_many :fans, through: :favorites, source: :user
