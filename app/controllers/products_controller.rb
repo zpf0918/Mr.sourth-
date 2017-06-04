@@ -64,22 +64,15 @@ class ProductsController < ApplicationController
 		redirect_to :back
 	end
 
-  def add_buying_quantity
-  if @product.buying_quantity <= @product.quantity
-    @product.buying_quantity +=1
-    @product.save
-   redirect_to :back
+  def instant_buy
+  @product = Product.find(params[:id])
+  if !current_cart.products.include?(@product)
+    current_cart.add_product_to_cart(@product)
+  else
+    flash[:warning] = "你的购物车已有此物品，快去结账吧"
   end
+  redirect_to carts_path
 end
-
-def remove_buying_quantity
-  if @product.buying_quantity > 1
-    @product.buying_quantity -= 1
-    @product.save
-    redirect_to :back
-  end
-end
-
 
 
 

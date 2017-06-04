@@ -42,8 +42,7 @@ end
       post :add_to_cart
       post :favorite
       post :unfavorite
-      post :add_buying_quantity
-      post :remove_buying_quantity
+      post :instant_buy
     end
     resources :reviews
   end
