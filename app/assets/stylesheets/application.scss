@@ -592,6 +592,7 @@ img {
     font-size: 24px;
 }
 
+/*------------------加入购物车按钮-------------*/
 .intro-text-btn.add-cart {
     color: #fff;
 }
@@ -622,6 +623,26 @@ img {
     margin-left: 20px;
 }
 
+/*------------------立即购买按钮------------------*/
+.intro-text-btn1.add-cart {
+    color: #D32048;
+}
+
+.bg-red1 {
+    background: #fff;
+}
+
+.intro-text-btn1 {
+    display: block;
+    width: 178px;
+    height: 48px;
+    line-height: 45px;
+    border: 1px solid #d32048;
+    font-family: "Microsoft Yahei",simhei;
+    border-radius: 50px;
+}
+/*------------------end------------------------*/
+
 .show-page, .search-page {
     width: 1200px;
 }
@@ -637,9 +658,6 @@ img {
     overflow: hidden;
 }
 
-.ml20 {
-    margin-left: 20px;
-}
 
 .show-page {
     width: 1200px;
