@@ -50,6 +50,8 @@ gem 'will_paginate-bootstrap'
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 
+
+
 gem 'figaro'
 
 #理清model关系的gem
