@@ -26,6 +26,7 @@
    </div>
    <!--end-->
 
+   <!-- 为了与搜索反馈页面样式一致，因此类命名业余其一致，未重新修改-->
       <div class="row">
         <% @products.each do |product| %>
           <div class="col-xs-6 col-md-3 product-content">
@@ -50,7 +51,7 @@
                      <%= product.title %>
                   <% end %>
                     <span class="pull-right">
-                        <%= link_to add_to_cart_product_path(product), :class => "like ",  method: :post do %>
+                        <%= link_to add_to_cart_product_path(product),   method: :post do %>
                           <i class="fa fa-shopping-cart"></i>
                         <% end %>
                     </span>
@@ -63,7 +64,7 @@
 
         <% end %>
       </div>
-  
+
 
    <!-- 分页样式 -->
      <div class="page-box">
