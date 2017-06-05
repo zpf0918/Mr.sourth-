@@ -1305,3 +1305,15 @@ p {
     -webkit-font-smoothing: antialiased;
   }
 }
+/*----------------排序------------------*/
+.order {
+  background: #fff;
+  height: 40px;
+  line-height: 30px;
+}
+.orderList-orderItem {
+  cursor: pointer;
+}
+.orderList-activeItem a {
+  color: #d32048;
+}

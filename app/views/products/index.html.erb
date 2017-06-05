@@ -5,25 +5,16 @@
         <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1ffuhhtktdvj30vy0eita0.jpg">
       </div>
     </div>
-    <!--排序下拉菜单-->
-    <div class="dropdown clearfix pull-right">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        商品排序
-          <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-        <li>
-          <%= link_to("上架时间", products_path ) %>
-        </li>
-        <li>
-          <%= link_to("价格", products_path(:order => "by_product_price")) %>
-        </li>
-        <li>
-            <%= link_to("人气", products_path(:order => "by_fans")) %>
-        </li>
-
+    <!--排序-->
+    <div class="order clearfix mt30 w1200 bc">
+      <p class="fl title pl20 pr20">商品排序：</p>
+      <ul class="fl orderList">
+        <li class="fl orderList-orderItem pl20 pr20"><%= link_to("新品", products_path) %></li>
+        <li class="fl orderList-orderItem pl20 pr20 "><%= link_to("价格", products_path(:order => "by_product_price")) %></li>
+        <li class="fl orderList-orderItem pl20 pr20 ">  <%= link_to("人气", products_path(:order => "by_fans")) %></li>
       </ul>
-   </div>
+    </div>
+  
    <!--end-->
 
    <!-- 为了与搜索反馈页面样式一致，因此类命名业余其一致，未重新修改-->
