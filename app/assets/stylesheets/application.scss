@@ -1306,14 +1306,20 @@ p {
   }
 }
 /*----------------排序------------------*/
-.order {
+.product-order {
   background: #fff;
   height: 40px;
   line-height: 30px;
+  width: 97%;
 }
 .orderList-orderItem {
   cursor: pointer;
 }
 .orderList-activeItem a {
   color: #d32048;
+}
+
+
+.product-interval{
+  width: 25%;
 }
