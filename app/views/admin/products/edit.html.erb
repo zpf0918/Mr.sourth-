@@ -29,7 +29,7 @@
 
 
    <div class="group">
-     <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别")%>
+    <%= f.input :category_id, as: :select, collection: @categories, label: "类别" %>
    </div><br/>
 
    <% if @product.photos.present? %>

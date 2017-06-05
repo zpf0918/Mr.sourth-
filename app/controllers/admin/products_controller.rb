@@ -17,12 +17,11 @@ class Admin::ProductsController < ApplicationController
   def new
     @product = Product.new
     @photo = @product.photos.build
-    @categories = Category.all.map { |c| [c.name, c.id]}
+    @categories = Category.all
   end
 
   def create
     @product = Product.new(product_params)
-    @product.category_id = params[:category_id]
     if @product.save
       if params[:photos] != nil
         params[:photos]['avatar'].each do |a|
@@ -32,32 +31,30 @@ class Admin::ProductsController < ApplicationController
     end
       redirect_to admin_products_path
     else
+      @categories = Category.all
       render :new
     end
   end
 
   def edit
     @product = Product.find(params[:id])
-     @categories = Category.all.map { |c| [c.name, c.id] }
+     @categories = Category.all
   end
 
   def update
     @product = Product.find(params[:id])
-    @product.category_id = params[:category_id]
     if params[:photos] != nil
       @product.photos.destroy_all #need to destroy old pics first
 
       params[:photos]['avatar'].each do |a|
         @picture = @product.photos.create(:avatar => a)
       end
+    end
 
-
-      # @product.update(product_params)
-      # redirect_to admin_products_path 感觉多了暂时删掉
-
-     @product.update(product_params)
+    if @product.update(product_params)
       redirect_to admin_products_path
     else
+      @categories = Category.all
       render :edit
     end
   end
