@@ -635,7 +635,7 @@ img {
 .intro-text-btn1 {
     display: block;
     width: 178px;
-    height: 48px;
+    height: 55px;
     line-height: 45px;
     border: 1px solid #d32048;
     font-family: "Microsoft Yahei",simhei;
@@ -1268,6 +1268,12 @@ p {
 .panel{
   margin-top: 20px;
 }
+
+a.user-set {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #333;
+} //个人中心的操作选项
 
 /*----------------购物车内“+”-”按钮-----------*/
 

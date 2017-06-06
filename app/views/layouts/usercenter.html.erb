@@ -16,14 +16,14 @@
         <div class="panel-body">
             <div class="col-md-2">
               <ul class="nav nav-pills1 nav-stacked" style="max-width: 300px;">
-                <li>
-                  <%= link_to "个人设置", account_users_path(current_user) %>
+                <li class="btn">
+                  <i class="fa fa-cog" aria-hidden="true">&nbsp &nbsp<%= link_to "个人设置", account_users_path(current_user), class: 'user-set' %></i>
                 </li>
-                <li>
-                  <%= link_to("我的收藏", favorites_path ) %>
+                <li class="btn">
+                  <i class="fa fa-star" aria-hidden="true">&nbsp &nbsp<%= link_to("我的收藏", favorites_path, class: 'user-set' )%></i>
                 </li>
-                <li>
-                  <%= link_to("我的订单", account_orders_path) %>
+                <li class="btn">
+                  <i class="fa fa-user-circle-o" aria-hidden="true">&nbsp &nbsp<%= link_to("我的订单", account_orders_path, class: 'user-set')%></i>
                 </li>
               </ul>
             </div>
