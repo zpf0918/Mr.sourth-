@@ -70,11 +70,15 @@ body {
     background: #F5F5F5;
 }
 
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+.carousel-inner>img, .carousel-inner>.item>a>img {
     display: block;
     max-width: 100%;
     height: auto;
     line-height: 1;
+}
+
+.item-img > img{
+  width: 1141px;
 }
 
 //----------- 热门商品 -------------//

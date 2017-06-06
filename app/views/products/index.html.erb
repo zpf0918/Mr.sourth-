@@ -1,8 +1,9 @@
 <div class="product-box">
-  <div class="container">
     <div class="carousel-inner">
-      <div class="item active">
-        <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1ffuhhtktdvj30vy0eita0.jpg">
+      <div class="container">
+      <div class="item active item-img">
+        <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgbphjuzksj30v40f4q4i.jpg">
+       </div>
       </div>
     </div>
     <!--排序-->
@@ -43,6 +44,7 @@
                   <%= link_to product_path(product) do %>
                      <%= product.title %>
                   <% end %>
+                  <br/>
                     <span class="pull-right">
                         <%= link_to add_to_cart_product_path(product),   method: :post do %>
                           <i class="fa fa-shopping-cart"></i>
