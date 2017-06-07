@@ -1,36 +1,23 @@
-<div class="row ">
-  <% @products.each do |product| %>
-    <div class="col-xs-8  product-interval product-content">
-      <div class="minHeight1000 bg-gray">
-        <div class="box panel product-search p15 fl panel-default">
-          <p class="productList-item-pic w200 h200">
+<h4 class="text-left">收藏列表</h4>
 
-         <%= link_to product_path(product) do %>
-           <% if product.image.present? %>
-             <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-           <% else %>
-             <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-           <% end %>
-         <% end %>
-         </p>
+    <table class="table">
+      <thead>
+        <tr>
 
-          <div class="panel-body" style="padding:5px;">
-              <p class="productList-item-price fb col-red f18 mt10">￥<%= product.price %></p>
-              <p class="productList-item-name ell">
-              <%= link_to product_path(product) do %>
-                <%= product.title %>
-              <% end %>
-              <br/>
-              <span class="pull-right">
-                  <%= link_to add_to_cart_product_path(product),   method: :post do %>
-                    <i class="fa fa-shopping-cart"></i>
-                  <% end %>
-              </span>
+          <th> 名称 </th>
+          <th> 描述 </th>
+        </tr>
+      </thead>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
-</div>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+
+
+            <td> <%= link_to(product.title, product_path(product)) %> </td>
+            <td> <%= product.description %> </td>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
