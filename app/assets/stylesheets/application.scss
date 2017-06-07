@@ -444,8 +444,11 @@ img {
     font-weight: bold;
 }
 
-.lp-b-btn a:hover{
-   color: #fff !important;
+.lp-action {
+  a:hover,a:focus{
+    color: #c0392b !important;
+  }
+
 }
 
 
@@ -458,6 +461,7 @@ img {
     text-align: center;
     font-size: 12px;
     color: #C2C2C2;
+
 }
 
 .footer span {
@@ -468,9 +472,16 @@ img {
     line-height: 23px;
   }
 
-  .footer-text {
+.footer-text {
     color: #C2C2C2;
-  }
+    }
+
+.footer {
+    a:hover, a:focus{
+    color: #fff !important;
+    text-decoration: none; //无下划线
+   }
+ }
 
 /*---------------------- products/show -------------------*/
 
