@@ -9,11 +9,11 @@
     <!--排序-->
     <div class="container">
     <div class="product-order clearfix mt30 w1200 bc">
-      <p class="fl title pl20 pr20">商品排序：</p>
       <ul class="fl orderList">
+        <li class="fl orderList-orderItem pl20 pr20 "><%= link_to("人气", products_path(:order => "by_fans")) %></li>
         <li class="fl orderList-orderItem pl20 pr20"><%= link_to("新品", products_path) %></li>
         <li class="fl orderList-orderItem pl20 pr20 "><%= link_to("价格", products_path(:order => "by_product_price")) %></li>
-        <li class="fl orderList-orderItem pl20 pr20 ">  <%= link_to("人气", products_path(:order => "by_fans")) %></li>
+
       </ul>
     </div>
 
@@ -21,7 +21,7 @@
    <!--end-->
 
    <!-- 为了与搜索反馈页面样式一致，因此类命名业余其一致，未重新修改-->
-      <div class="row">
+      <div class="row ">
         <% @products.each do |product| %>
           <div class="col-xs-6  product-interval product-content">
             <div class="minHeight1000 bg-gray">
@@ -38,13 +38,12 @@
                </p>
 
                 <div class="panel-body" style="padding:5px;">
-
-                    <p class="productList-item-price fb col-red f18 mt10">￥<%= product.price %>
-                      <p class="productList-item-name ell">
-                  <%= link_to product_path(product) do %>
-                     <%= product.title %>
-                  <% end %>
-                  <br/>
+                    <p class="productList-item-price fb col-red f18 mt10">￥<%= product.price %></p>
+                    <p class="productList-item-name ell">
+                    <%= link_to product_path(product) do %>
+                      <%= product.title %>
+                    <% end %>
+                    <br/>
                     <span class="pull-right">
                         <%= link_to add_to_cart_product_path(product),   method: :post do %>
                           <i class="fa fa-shopping-cart"></i>
