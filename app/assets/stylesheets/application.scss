@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require social-share-button
  */
 
 @import "bootstrap-sprockets";
@@ -232,7 +233,7 @@ section h2 {
 }
 
 .pl20 {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .bc {
@@ -444,8 +445,11 @@ img {
     font-weight: bold;
 }
 
-.lp-b-btn a:hover{
-   color: #ecf0f1 !important;
+.lp-action {
+  a:hover,a:focus{
+    color: #c0392b !important;
+  }
+
 }
 
 
@@ -458,6 +462,7 @@ img {
     text-align: center;
     font-size: 12px;
     color: #C2C2C2;
+
 }
 
 .footer span {
@@ -468,9 +473,16 @@ img {
     line-height: 23px;
   }
 
-  .footer-text {
+.footer-text {
     color: #C2C2C2;
-  }
+    }
+
+.footer {
+    a:hover, a:focus{
+    color: #fff !important;
+    text-decoration: none; //无下划线
+   }
+ }
 
 /*---------------------- products/show -------------------*/
 
@@ -596,6 +608,17 @@ img {
     font-size: 24px;
 }
 
+/*------------------收藏按钮------------------*/
+.fa-star{
+  color: #D32048;
+  font-size: 10px;
+}
+
+.fa-lg{
+  font-size: 7em;
+}
+
+
 /*------------------加入购物车按钮-------------*/
 .intro-text-btn.add-cart {
     color: #fff;
@@ -608,11 +631,11 @@ img {
 .intro-text-btn {
     display: block;
     width: 178px;
-    height: 55px;
+    height: 48px;
     line-height: 45px;
     border: 1px solid #d32048;
     font-family: "Microsoft Yahei",simhei;
-    border-radius: 50px;
+    border-radius: 5px;
 }
 
 .pr15 {
@@ -643,7 +666,7 @@ img {
     line-height: 45px;
     border: 1px solid #d32048;
     font-family: "Microsoft Yahei",simhei;
-    border-radius: 50px;
+    border-radius: 5px;
 }
 /*------------------end------------------------*/
 
@@ -720,21 +743,6 @@ img {
     padding: 10px 12px 2px 13px;
 }
 
-// .wrapCon ul {
-//     width: 100%;
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//     position: absolute;
-// }
-
-// .wrapCon ul li {
-//     height: 174px;
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//     display: block;
-// }
 
 .wrapCon .wow {
     display: block;
@@ -960,6 +968,10 @@ p {
   color: #db3852;
 }
 
+.col-gray{
+   color: black;  
+}
+
 
 .checkout-submit {
   margin-right: 15px;
@@ -994,7 +1006,7 @@ p {
     background: #fff;
     margin-right: 12px;
     margin-bottom: 12px;
-    box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.09);
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.09);
     top: 0;
     transition: all .4s;
   }
@@ -1130,11 +1142,12 @@ p {
 }
 
 
-/*------商品展示页-----*/
+/*------商品展示页 product/index-----*/
 
 .product-content img {
     width: 100%;
     margin: 7.5px auto 7.5px auto;
+    box-shadow: 1px 2px 2px 1px rgba(66,36,27,0.2);
   }
 
   .product-info {
@@ -1203,19 +1216,12 @@ p {
       url("行书简体.woff") format("woff"), /* chrome、firefox */
       url("行书简体.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
 
-      url("行书简体.svg#行书简体") format("svg"); /* iOS 4.1- */
+      url("行书简体.svg#行书简体") format("svg");
       font-style: normal;
       font-weight: normal;
   }
 
 
-  //这块内容先保留，请别删除
-  // .logo-box {
-  //   margin-right: 15px;
-    // font-family: '行书简体'; /* 自己下载的字形 */
-  //   font-size: 30px;
-  //   color: #ecf0f1;
-  // }
   .logo-box1 {
     img {
       display: inline-block;
@@ -1318,17 +1324,25 @@ a.user-set {
 /*----------------排序------------------*/
 .product-order {
   background: #fff;
-  height: 50px;
-  line-height: 40px;
+  height: 40px;
+  line-height: 30px;
   width: 100%;
 }
+
 .orderList-orderItem {
   cursor: pointer;
 }
+
 .orderList-activeItem a {
   color: #d32048;
 }
 
+.orderList{
+  padding-left: 8px;
+  a:hover {
+    text-decoration:none; //去掉下划线
+  }
+}
 
 .product-interval{
   width: 25%;

@@ -1,13 +1,9 @@
 <%= simple_form_for([@product, @product.reviews.build]) do |f|%>
 
 <div class="form-group">
-  <%= f.input :body, label: "评论内容", input_html: { class: "form-control" ,style: "border: 1px solid #ccc;"} %>
+  <%= f.input :body, label: "我来说两句", input_html: { class: "form-control" ,style: "border: 1px solid #ccc;"} %>
 </div>
 
-  <!-- <div class="field">
-      <%= f.text_area :body, label: "评论内容", class: "form-control" %>
-  </div> -->
 
-
-  <%= f.submit "我来说两句", class: "btn btn-primary" %>
+  <%= f.submit "发表", class: "btn btn-default" %>
 <% end %>

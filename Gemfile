@@ -66,6 +66,8 @@ gem 'impressionist'
 
 # gem 'jquery-turbolinks'
 
+gem 'social-share-button'
+
 group :development, :test do
   gem 'pry'
   gem 'awesome_rails_console'
