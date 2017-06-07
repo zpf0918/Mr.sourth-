@@ -83,6 +83,7 @@
         <p class="intro-text-view">
           <span class="pl20 pr30">浏览</span><span><%= @product.impressionist_count(:filter=>:session_hash)%></span>
         </p>
+       </br>
     <p class="intro-text-btnWrap">
       <% if @product.quantity.present? && @product.quantity > 0 %>
 
@@ -116,7 +117,7 @@
 
 
        <div class="product-info">
-         <!--评论功能-->
+         <!--评论区域-->
          <div class="TabBarBox">
             <ul class="nav nav-tabs" role="tablist">
               <li class="active ">
