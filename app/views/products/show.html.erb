@@ -68,7 +68,7 @@
          <div class="intro-text-value bg-gray">
             <% if @product.discount.present? && @product.quantity > 0 %>
                 <div class="intro-text-value bg-gray">
-                 <span class="pl20 pr30">售价</span><s><span class="price f24 fb col-red">￥<%= @product.price %></span></s> &nbsp &nbsp &nbsp <span class="price f24 fb col-red">￥<%= @product.price = @product.price * @product.discount/100 %></span>
+                 <span class="pl20 pr30">售价</span><s><span class="price1 f20 fb col-gray">￥<%= @product.price %></span></s> &nbsp &nbsp &nbsp <span class="price f24 fb col-red">￥<%= @product.price = @product.price * @product.discount/100 %></span>
                 </div>
             <% else %>
             <% end %>
