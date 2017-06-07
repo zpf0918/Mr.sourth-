@@ -62,47 +62,56 @@
 
 
     <div class="intro-text fr col-md-6">
-        <h3 class="f20 ell fb"> <%= @product.title %> </h3>
+      <div class="row">
+       <h3 class="f20 ell fb"> <%= @product.title %> </h3>
 
-        <!-- 如果有折扣 -->
-      <% if @product.discount.present? && @product.quantity > 0 %>
-           <p class="intro-text-value bg-gray">
-            <span class="pl20 pr30">售价</span><s><span class="price f24 fb col-red">￥<%= @product.price %></span></s> &nbsp &nbsp &nbsp <span class="price f24 fb col-red">￥<%= @product.price = @product.price * @product.discount/100 %></span>
-          </p>
-     <% else %>
-       <p class="intro-text-value bg-gray">
-         <span class="pl20 pr30">售价</span><span class="price f24 fb col-red">￥<%= @product.price %></span>
-       </p>
-      <% end %>
-        <p class="intro-text-service">
-          <span class="pl20 pr30">运费</span><span>满199元包邮</span>
-        </p>
-        <p class="intro-text-count">
-          <span class="pl20 pr30">库存</span><span><%= @product.quantity %></span>
-        </p>
-        <p class="intro-text-view">
-          <span class="pl20 pr30">浏览</span><span><%= @product.impressionist_count(:filter=>:session_hash)%></span>
-        </p>
-       </br>
-    <p class="intro-text-btnWrap">
-      <% if @product.quantity.present? && @product.quantity > 0 %>
+         <div class="intro-text-value bg-gray">
+            <% if @product.discount.present? && @product.quantity > 0 %>
+                <div class="intro-text-value bg-gray">
+                 <span class="pl20 pr30">售价</span><s><span class="price f24 fb col-red">￥<%= @product.price %></span></s> &nbsp &nbsp &nbsp <span class="price f24 fb col-red">￥<%= @product.price = @product.price * @product.discount/100 %></span>
+                </div>
+            <% else %>
+            <% end %>
+          </div>
 
-        <%= link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red") %>
-      <% else %>
-        已销售一空，无法购买
-      <% end %>
+          <div class="intro-text-service">
+            <span class="pl20 pr30">运费</span><span>满199元包邮</span>
+          </div>
 
-      <% if @product.quantity.present? && @product.quantity > 0 %>
-        <%= link_to("立即购买", instant_buy_product_path(@product), :method => :post, :class => "intro-text-btn1 add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red1") %>
-      <% else %>
-        已销售一空，无法购买
-      <% end %>
-    <%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat linkedin qq weibo)) %>
-    </p>
+          <div class="intro-text-count">
+            <span class="pl20 pr30">库存</span><span><%= @product.quantity %></span>
+          </div>
 
+          <div class="intro-text-view">
+            <span class="pl20 pr30">浏览</span><span><%= @product.impressionist_count(:filter=>:session_hash)%></span>
+          </div>
+          </br>
 
+          <div class="row">
+            <div class="col-sm-4">
+              <% if @product.quantity.present? && @product.quantity > 0 %>
+                <%= link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red") %>
+              <% else %>
+                已销售一空，无法购买
+              <% end %>
+           </div>
 
-    </div>
+          <div class="col-sm-2">
+            <% if @product.quantity.present? && @product.quantity > 0 %>
+              <%= link_to("立即购买", instant_buy_product_path(@product), :method => :post, :class => "intro-text-btn1 add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red1") %>
+            <% else %>
+              已销售一空，无法购买
+            <% end %>
+          </div>
+       </div>
+     </div>
+     </br>
+
+     <div class="col-md-8 col-md-offet-8">
+          <%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat linkedin qq weibo)) %>
+     </div>
+     
+  </div>
  </div>
 
    <div class="container">
