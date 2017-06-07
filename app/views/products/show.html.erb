@@ -96,8 +96,9 @@
       <% else %>
         已销售一空，无法购买
       <% end %>
-
+    <%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat linkedin qq weibo)) %>
     </p>
+
 
 
     </div>
