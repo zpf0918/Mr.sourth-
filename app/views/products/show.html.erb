@@ -40,17 +40,17 @@
              <p class="mt20">
                <% if user_signed_in? %>
                  <% if !current_user.is_favorite_of?(@product) %>
-                    <%= link_to favorite_product_path(@product), :class => "like btn btn-default", method: :post do %>
+                    <%= link_to favorite_product_path(@product), :class => " btn btn-default", method: :post do %>
                      <i class="fa  fa-star-o fa-lg"></i>
                     <% end %>
                  <% else %>
-                    <%= link_to unfavorite_product_path(@product), :class => "unlike btn btn-default", method: :post do %>
+                    <%= link_to unfavorite_product_path(@product), :class => " btn btn-default", method: :post do %>
                      <i class="fa fa-star fa-lg"></i>
                    <% end %>
                  <% end %>
               <% else %>
                <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
-                 <i class="fa fa-heart fa-lg"></i>
+                 <i class="fa fa-heart-o fa-lg"></i>
                <% end %>
               <% end %>
             </p>
@@ -107,10 +107,10 @@
      </div>
      </br>
 
-     <div class="col-md-8 col-md-offet-8">
-          <%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat linkedin qq weibo)) %>
+     <div class="col-md-6">
+        分享至<%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat linkedin qq weibo)) %>
      </div>
-     
+
   </div>
  </div>
 
