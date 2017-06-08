@@ -1352,3 +1352,26 @@ a.user-set {
 .product-favorite{
   width: 50%;
 }
+
+/*------------------下拉菜单---------------*/
+.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    z-index: 5;
+}
+
+.category-dropdown .dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 90px;
+    z-index: 5;
+}
