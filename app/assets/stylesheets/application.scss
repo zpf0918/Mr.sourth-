@@ -661,7 +661,7 @@ img {
 .intro-text-btn1 {
     display: block;
     width: 178px;
-    height: 55px;
+    height: 48px;
     line-height: 45px;
     border: 1px solid #d32048;
     font-family: "Microsoft Yahei",simhei;
@@ -956,11 +956,50 @@ p {
     margin-top: 10px;
 }
 
+//确认结账按钮
+.intro-text-btn2.add-cart {
+    color: #fff;
+    text-decoration: none;
+    line-height:35px;
+}
+.intro-text-btn2 {
+    display: block;
+    width: 150px;
+    height: 48px;
+    line-height: 45px;
+    border: 1px solid #d32048;
+    font-family: "Microsoft Yahei",simhei;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+
 
 /*------------- carts/checkout page----------------------*/
 
+.cartProducts-title{
+  height: 50px;
+  line-height: 50px;
+  padding-left: 0px;
+  color: rgb(34,34,34);
+  background-color: rgb(245,245,245);
+}
+
+.cartProducts-listItem {
+  background: #fff;
+}
+
+.cartProducts-listItem .item-msg a {
+  color: rgb(34,34,34);
+  line-height: 50px;
+}
+
+.cartProducts-listItem .item-msg a:hover{
+   color: rgb(211,32,72);
+
+   text-decoration:none;
+}
 .checkout-info {
-  background-color: #222;
   color: #9d9d9d;
 }
 
@@ -1265,8 +1304,10 @@ p {
 
 /*----------------个人中心页面------------------*/
 
+
 .nav-pills1{
-  box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.3)
+  box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.3);
+  height: 150px;
 }
 .panel-heading {
     padding: 30px 15px;
@@ -1351,4 +1392,27 @@ a.user-set {
 /*------------------收藏列表---------------*/
 .product-favorite{
   width: 50%;
+}
+
+/*------------------下拉菜单---------------*/
+.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    z-index: 5;
+}
+
+.category-dropdown .dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 90px;
+    z-index: 5;
 }
