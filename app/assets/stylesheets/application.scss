@@ -956,6 +956,24 @@ p {
     margin-top: 10px;
 }
 
+//确认结账按钮
+.intro-text-btn2.add-cart {
+    color: #fff;
+    text-decoration: none;
+    line-height:35px;
+}
+.intro-text-btn2 {
+    display: block;
+    width: 150px;
+    height: 48px;
+    line-height: 45px;
+    border: 1px solid #d32048;
+    font-family: "Microsoft Yahei",simhei;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+
 
 /*------------- carts/checkout page----------------------*/
 
@@ -971,6 +989,16 @@ p {
   background: #fff;
 }
 
+.cartProducts-listItem .item-msg a {
+  color: rgb(34,34,34);
+  line-height: 50px;
+}
+
+.cartProducts-listItem .item-msg a:hover{
+   color: rgb(211,32,72);
+
+   text-decoration:none;
+}
 .checkout-info {
   color: #9d9d9d;
 }
