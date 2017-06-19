@@ -9,7 +9,6 @@ class ProductsController < ApplicationController
   end
 
   def index
-
     # 分类功能
     if params[:category].present?
       @category_id = Category.find_by(name: params[:category]).id
