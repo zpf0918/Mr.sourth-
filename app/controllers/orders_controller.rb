@@ -7,8 +7,6 @@ class OrdersController < ApplicationController
     @order.total = current_cart.total_price
 
     if @order.save
-
-
       current_cart.cart_items.each do |cart_item|
         product_list = ProductList.new
         product_list.order = @order
@@ -17,6 +15,7 @@ class OrdersController < ApplicationController
         product_list.quantity = cart_item.quantity
         product_list.save
       end
+
       current_cart.clean!
       OrderMailer.notify_order_placed(@order).deliver!
       redirect_to order_path(@order.token)
