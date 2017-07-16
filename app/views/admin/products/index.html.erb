@@ -1,20 +1,20 @@
-  <h2> 商品列表 </h2>
-  <div class="pull-right" style="padding-bottom: 20px;">
-    <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
-  </div>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>上下架情况</th>
-        <th width="220">Product Pic</th>
-        <th>名称</th>
-        <th>价格</th>
-        <th width="100"> Options</th>
+<h2> 商品列表 </h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>上下架情况</th>
+      <th width="220">Product Pic</th>
+      <th>名称</th>
+      <th>价格</th>
+      <th width="100"> Options</th>
 
-      </tr>
-    </thead>
-    <tbody>
-      <%= render :partial => "product_item", :collection => @products, :as => :product %>
-    </tbody>
-  </table>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => "product_item", :collection => @products, :as => :product %>
+  </tbody>
+</table>
