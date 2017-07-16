@@ -21,8 +21,7 @@ before_action :authenticate_user!
     else
      flash[:warning] = "数量不足以加入购物车"
     end
-
-
+    
     redirect_to carts_path
   end
 
