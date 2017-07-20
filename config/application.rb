@@ -9,4 +9,5 @@ Bundler.require(*Rails.groups)
 module Jdstore
   class Application < Rails::Application
   
+  end
 end
