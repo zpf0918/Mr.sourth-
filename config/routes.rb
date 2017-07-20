@@ -8,30 +8,30 @@ Rails.application.routes.draw do
 
 root "welcomes#index"
 
-namespace :admin do
-   resources :products do
-     member do
-       patch :move_up
-       patch :move_down
-       post  :publish
-       post  :hide
+  namespace :admin do
+     resources :products do
+       member do
+         patch :move_up
+         patch :move_down
+         post  :publish
+         post  :hide
+       end
      end
-   end
-   resources :orders do
-     member do
-       post :cancel
-       post :ship
-       post :shipped
-       post :return
+     resources :orders do
+       member do
+         post :cancel
+         post :ship
+         post :shipped
+         post :return
+       end
      end
-   end
-   resources :categories
-end
+     resources :categories
+  end
 
-namespace :account do
-  resources :orders
-  resources :users
-end
+  namespace :account do
+    resources :orders
+    resources :users
+  end
 
 
   resources :products do
