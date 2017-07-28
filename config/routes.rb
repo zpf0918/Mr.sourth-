@@ -9,14 +9,7 @@ Rails.application.routes.draw do
 root "welcomes#index"
 
   namespace :admin do
-     resources :products do
-       member do
-         patch :move_up
-         patch :move_down
-         post  :publish
-         post  :hide
-       end
-     end
+     resources :products  
      resources :orders do
        member do
          post :cancel

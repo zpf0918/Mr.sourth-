@@ -26,15 +26,15 @@
       <%= link_to("编辑", edit_admin_product_path(product)) %>
     </div>
     <div>
-      <%= link_to("向上", move_up_admin_product_path(product), method: :patch, :class => "btn btn-xs btn-info order-btn")%>
-      <%= link_to("向下", move_down_admin_product_path(product), method: :patch, :class => "btn btn-xs btn-info order-btn")%>
+      <%= link_to("向上", admin_product_path(product, status: "move_up"), method: :patch, :class => "btn btn-xs btn-info order-btn")%>
+      <%= link_to("向下", admin_product_path(product, status: "move_down"), method: :patch, :class => "btn btn-xs btn-info order-btn")%>
     </div>
     <!--管理员下架商品-->
     <div>
     <% if product.is_hidden %>
-     <%= link_to("上架", publish_admin_product_path(product) , :method => :post, :class => "btn btn-xs btn-success order-btn") %>
+     <%= link_to("上架", admin_product_path(product, status: "publish") , :method => :patch, :class => "btn btn-xs btn-success order-btn") %>
     <% else %>
-     <%= link_to("下架", hide_admin_product_path(product), :method => :post, :class => "btn btn-xs btn-danger order-btn") %>
+     <%= link_to("下架", admin_product_path(product, status: "hide"), :method => :patch, :class => "btn btn-xs btn-danger order-btn") %>
     <% end %>
   </div>
   </td>
