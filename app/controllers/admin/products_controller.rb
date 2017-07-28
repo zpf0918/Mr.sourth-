@@ -27,8 +27,7 @@ class Admin::ProductsController < ApplicationController
         params[:photos]['avatar'].each do |a|
           @photo = @product.photos.create(:avatar => a)
         end
-
-    end
+      end
       redirect_to admin_products_path
     else
       @categories = Category.all
@@ -38,7 +37,7 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-     @categories = Category.all
+    @categories = Category.all
   end
 
   def update
@@ -63,10 +62,8 @@ class Admin::ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
-
     @product.destroy
       redirect_to admin_products_path
-
   end
 
   def move_up
@@ -97,11 +94,11 @@ class Admin::ProductsController < ApplicationController
   end
 
   def discount_price
-  @product = Product.find(params[:id])
-  if @product.discount.present?()
-    @product.price = @product.price * (@product.discount / 100 )
+    @product = Product.find(params[:id])
+    if @product.discount.present?()
+       @product.price = @product.price * (@product.discount / 100 )
+    end
   end
-end
 
 
  private
