@@ -1,35 +1,34 @@
 <div class="product-box">
-    <div class="carousel-inner">
-      <div class="container">
-      <div class="item active item-img">
-        <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgbphjuzksj30v40f4q4i.jpg">
-       </div>
-      </div>
-    </div>
-    <!--排序-->
+  <div class="carousel-inner">
     <div class="container">
+     <div class="item active item-img">
+      <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgbphjuzksj30v40f4q4i.jpg">
+     </div>
+    </div>
+  </div>
+
+  <!--排序-->
+  <div class="container">
     <div class="product-order clearfix mt30 w1200 bc">
       <ul class="fl orderList">
         <li class="fl orderList-orderItem pl20 pr20 "><%= link_to("人气", products_path(:order => "by_fans")) %></li>
         <li class="fl orderList-orderItem pl20 pr20"><%= link_to("新品", products_path) %></li>
         <li class="fl orderList-orderItem pl20 pr20 "><%= link_to("价格", products_path(:order => "by_product_price")) %></li>
-
       </ul>
     </div>
+  <!--end-->
 
-
-   <!--end-->
-
-   <!-- 为了与搜索反馈页面样式一致，因此类命名业余其一致，未重新修改-->
-      <div class="row ">
-        <%= render :partial => "product_item", :collection => @products, :as => :product %>
-      </div>
-    </div>
-
-
-   <!-- 分页样式 -->
-     <div class="page-box">
-      <%= will_paginate @products, renderer: BootstrapPagination::Rails, :previous_label => t('previous-label'), :next_label => t('next-label') %>
+  <!-- 为了与搜索反馈页面样式一致，因此类命名业余其一致，未重新修改-->
+    <div class="row ">
+      <%= render :partial => "product_item", :collection => @products, :as => :product %>
     </div>
   </div>
+  <!--end-->
+
+  <!-- 分页样式 -->
+  <div class="page-box">
+    <%= will_paginate @products, renderer: BootstrapPagination::Rails, :previous_label => t('previous-label'), :next_label => t('next-label') %>
+  </div>
+  <!--end-->
+  
 </div>
