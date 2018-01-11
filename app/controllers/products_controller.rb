@@ -12,16 +12,16 @@ class ProductsController < ApplicationController
     # 分类功能
     if params[:category].present?
       @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(category_id: @category_id).order("position ASC").published.paginate(:page => params[:page], :per_page => 16)
+      @products = Product.where(category_id: @category_id).order("position ASC").published.paginate(:page => params[:page], :per_page => 5)
      # 排序功能
     else
       @products = case params[:order]
         when 'by_product_price'
-          Product.published.order('price DESC').paginate(:page => params[:page], :per_page => 16)
+          Product.published.order('price DESC').paginate(:page => params[:page], :per_page => 5)
         when 'by_fans'
-          Product.published.all.order("position ASC").paginate(:page => params[:page], :per_page => 16)
+          Product.published.all.order("position ASC").paginate(:page => params[:page], :per_page => 5)
         else
-          Product.published.recent.paginate(:page => params[:page], :per_page => 16)
+          Product.published.recent.paginate(:page => params[:page], :per_page => 5)
         end
     end
   end
