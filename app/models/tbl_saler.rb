@@ -1,0 +1,2 @@
+class TblSaler < ApplicationRecord
+end

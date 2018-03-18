@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170602031118) do
+ActiveRecord::Schema.define(version: 20180318065626) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -109,6 +109,8 @@ ActiveRecord::Schema.define(version: 20170602031118) do
     t.integer  "category_id"
     t.boolean  "is_hidden",   default: false
     t.integer  "discount"
+    t.string   "friendly_id"
+    t.index ["friendly_id"], name: "index_products_on_friendly_id", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -117,6 +119,67 @@ ActiveRecord::Schema.define(version: 20170602031118) do
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tbl_checks", force: :cascade do |t|
+    t.integer  "扣款合计"
+    t.integer  "安全业绩扣款"
+    t.integer  "生产经营绩效扣款"
+    t.integer  "总重吨公里扣款"
+    t.integer  "综合指标扣款"
+    t.integer  "设备质量扣款"
+    t.integer  "盈亏结果扣款"
+    t.integer  "安全质量扣款"
+    t.integer  "安全质量考核中牌卡扣分"
+    t.integer  "安全质量考核中牌卡扣款"
+    t.integer  "工作质量扣款"
+    t.integer  "抽考扣款"
+    t.integer  "红牌中层扣款"
+    t.integer  "处分扣款"
+    t.integer  "其他扣款"
+    t.string   "科室车间"
+    t.integer  "序号"
+    t.integer  "挂钩考核扣款"
+    t.float    "安全业绩扣分"
+    t.float    "总重吨公里扣分"
+    t.float    "综合指标扣分"
+    t.float    "设备质量扣分"
+    t.float    "盈亏结果扣分"
+    t.float    "安全质量扣分"
+    t.float    "工作质量扣分"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["序号"], name: "index_tbl_checks_on_序号", unique: true
+  end
+
+  create_table "tbl_salers", force: :cascade do |t|
+    t.string  "部门班组"
+    t.string  "姓名"
+    t.float   "系数",    limit: 24
+    t.decimal "挂钩",               precision: 10
+    t.integer "安全质量"
+    t.integer "工作质量"
+    t.integer "一体化"
+    t.integer "兼职兼岗"
+    t.integer "应发"
+    t.integer "考核扣款"
+    t.string  "备注"
+    t.string  "科室车间"
+    t.integer "其他"
+    t.string  "单项奖"
+    t.integer "单项奖金额"
+    t.integer "车间编号"
+    t.integer "车间序号"
+    t.integer "序号"
+    t.string  "人员分类"
+    t.integer "综合"
+    t.integer "捆挂"
+    t.integer "安全"
+    t.integer "效益"
+    t.integer "小计"
+    t.string  "职务"
+    t.float   "原系数备份", limit: 24
+    t.index [nil], name: "index_tbl_salers_on_工资号", unique: true
   end
 
   create_table "users", force: :cascade do |t|
